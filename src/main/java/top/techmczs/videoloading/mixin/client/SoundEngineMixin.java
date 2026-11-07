@@ -17,6 +17,7 @@
 package top.techmczs.videoloading.mixin.client;
 
 import net.minecraft.client.resources.sounds.SoundInstance;
+import net.minecraft.client.resources.sounds.TickableSoundInstance;
 import net.minecraft.client.sounds.SoundEngine;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -39,8 +40,15 @@ public abstract class SoundEngineMixin {
         }
     }
 
-    @Inject(method = {"playDelayed", "queueTickingSound"}, at = @At("HEAD"), cancellable = true)
-    private void videoloading$silenceTickableDuringVideo(SoundInstance sound, CallbackInfo ci) {
+    @Inject(method = "playDelayed", at = @At("HEAD"), cancellable = true)
+    private void videoloading$silenceDelayedDuringVideo(SoundInstance sound, int delay, CallbackInfo ci) {
+        if (StartupVideo.isActive()) {
+            ci.cancel();
+        }
+    }
+
+    @Inject(method = "queueTickingSound", at = @At("HEAD"), cancellable = true)
+    private void videoloading$silenceTickingDuringVideo(TickableSoundInstance sound, CallbackInfo ci) {
         if (StartupVideo.isActive()) {
             ci.cancel();
         }
