@@ -19,7 +19,6 @@ package top.techmczs.videoloading.mixin.client;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.server.packs.resources.ReloadInstance;
 import net.minecraftforge.client.loading.ForgeLoadingOverlay;
 
@@ -32,9 +31,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import top.techmczs.videoloading.client.StartupVideo;
 
-import com.mojang.logging.LogUtils;
 
-import org.slf4j.Logger;
 
 /**
  * 把 Forge 的加载界面替换为 mod 的启动视频。
@@ -53,7 +50,6 @@ import org.slf4j.Logger;
  */
 @Mixin(value = ForgeLoadingOverlay.class, remap = false)
 public abstract class SplashOverlayMixin {
-    private static final Logger LOGGER = LogUtils.getLogger();
     @Shadow(remap = false)
     @Final
     private Minecraft minecraft;
@@ -68,29 +64,31 @@ public abstract class SplashOverlayMixin {
         // 首次渲染时初始化视频；失败则回退 Forge 原版加载界面
         StartupVideo.begin(this.minecraft);
         if (!StartupVideo.isActive()) {
+            // 视频会话未激活（初始化失败或已放行）：交还 Forge 原生渲染。
+            // 放行后必须让 Forge 走自己的原生收尾（fadeOutStart → 淡出 →
+            // setOverlay(null) + displayWindow.close()），手工模仿会漏掉
+            // early display 的交接状态，导致画面冻结在最后一帧
             return;
         }
-        ci.cancel();
+
+        // 加载完成且视频已完整播过一遍（或玩家已跳过）时放行：
+        // 停掉视频会话，之后不再 cancel，交还 Forge 原生淡出
+        if (this.reload.isDone() && !StartupVideo.holdsOverlay()) {
+            StartupVideo.stop();
+            // 显示加载期间被 MinecraftMixin 推迟的主菜单（若已被推迟）
+            Screen pending = StartupVideo.takePendingScreen();
+            if (pending != null) {
+                this.minecraft.setScreen(pending);
+            }
+            return;
+        }
 
         // 视频帧 + 底部横幅；帧绘制内部若发现解码线程死亡会停用视频会话
         if (StartupVideo.renderFrame(graphics)) {
             StartupVideo.renderHud(graphics);
+            ci.cancel();
         } else {
-            return;
-        }
-
-        // 加载完成且视频已完整播过一遍（或玩家已跳过）时放行，
-        // 显示加载期间被 MinecraftMixin 推迟的主菜单
-        if (this.reload.isDone() && !StartupVideo.holdsOverlay()) {
             StartupVideo.stop();
-            this.minecraft.setOverlay(null);
-            Screen pending = StartupVideo.takePendingScreen();
-            if (pending == null) {
-                // 兜底：推迟机制意外丢失时也要显示主菜单，避免黑屏
-                pending = new TitleScreen();
-                LOGGER.info("放行时无缓存的待显示界面，兜底进入主菜单");
-            }
-            this.minecraft.setScreen(pending);
         }
     }
 }
