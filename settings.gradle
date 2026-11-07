@@ -1,18 +1,24 @@
 pluginManagement {
-	repositories {
-		maven {
-			name = 'Aliyun'
-			url = 'https://maven.aliyun.com/repository/gradle-plugin'
-		}
-		maven {
-			name = 'AliyunPublic'
-			url = 'https://maven.aliyun.com/repository/public'
-		}
-		maven {
-			name = 'Fabric'
-			url = 'https://maven.fabricmc.net/'
-		}
-		mavenCentral()
-		gradlePluginPortal()
-	}
+    repositories {
+        // 国内镜像优先；legacyforge 插件标记在 NeoForge maven 上（直连被污染需走代理）
+        maven {
+            name = 'Aliyun'
+            url = 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
+        maven {
+            name = 'AliyunPublic'
+            url = 'https://maven.aliyun.com/repository/public'
+        }
+        mavenCentral()
+        gradlePluginPortal()
+        maven {
+            name = 'NeoForged'
+            url = 'https://maven.neoforged.net/releases'
+        }
+    }
+}
+
+plugins {
+    // 自动下载缺失版本的 JDK（本机只有 JDK 21，mod 目标 Java 17）
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
 }

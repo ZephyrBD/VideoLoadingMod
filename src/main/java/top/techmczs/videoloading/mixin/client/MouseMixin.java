@@ -16,12 +16,8 @@
  */
 package top.techmczs.videoloading.mixin.client;
 
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.Mouse;
-import net.minecraft.client.util.Window;
-
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.MouseHandler;
 
 import org.lwjgl.glfw.GLFW;
 import org.spongepowered.asm.mixin.Final;
@@ -36,28 +32,27 @@ import top.techmczs.videoloading.client.StartupVideo;
 /**
  * 启动视频期间捕获鼠标点击。
  *
- * <p>{@code SplashOverlay} 只是 {@code Overlay}，不实现
- * {@code Element}，且 {@code Mouse#onMouseButton} 在 overlay 存在时
- * 会直接跳过点击转发，所以原版加载界面收不到任何鼠标输入。
+ * <p>{@code LoadingOverlay} 只是 {@code Overlay}，不实现
+ * {@code GuiEventListener}，且 {@code MouseHandler#onPress} 在 overlay
+ * 存在时会直接跳过点击转发，所以原版加载界面收不到任何鼠标输入。
  * 这里在方法入口处把点击转发给 {@code StartupVideo}，用于
- * 呼出并点击右上角的跳过按钮。点击坐标按原版公式从窗口像素
- * 坐标缩放成 GUI 坐标，与界面绘制一致。
+ * 呼出并点击右上角的跳过按钮。
  */
-@Mixin(Mouse.class)
-@Environment(EnvType.CLIENT)
+@Mixin(MouseHandler.class)
 public abstract class MouseMixin {
     @Shadow
     @Final
-    private MinecraftClient client;
+    private Minecraft minecraft;
 
-    @Inject(method = "onMouseButton", at = @At("HEAD"))
-    private void mvm$forwardClickToStartupVideo(long window, int button, int action, int mods, CallbackInfo ci) {
-        if (action == GLFW.GLFW_PRESS && button == 0 && client.getOverlay() != null) {
-            // x/y 字段与 getX()/getY() 都是原始窗口像素坐标，
-            // 需按原版同款公式缩放成 GUI 坐标，与界面绘制一致
-            Window win = client.getWindow();
-            int guiX = (int) (((Mouse) (Object) this).getX() * win.getScaledWidth() / win.getWidth());
-            int guiY = (int) (((Mouse) (Object) this).getY() * win.getScaledHeight() / win.getHeight());
+    @Inject(method = "onPress", at = @At("HEAD"))
+    private void vl$forwardClickToStartupVideo(long window, int button, int action, int mods, CallbackInfo ci) {
+        if (action == GLFW.GLFW_PRESS && button == 0 && minecraft.getOverlay() != null) {
+            // xpos()/ypos() 是原始窗口像素坐标，需按原版同款公式
+            // 缩放成 GUI 坐标，与界面绘制一致
+            MouseHandler self = (MouseHandler) (Object) this;
+            var win = minecraft.getWindow();
+            int guiX = (int) (self.xpos() * win.getGuiScaledWidth() / win.getWidth());
+            int guiY = (int) (self.ypos() * win.getGuiScaledHeight() / win.getHeight());
             StartupVideo.onMouseClick(guiX, guiY);
         }
     }

@@ -16,10 +16,7 @@
  */
 package top.techmczs.videoloading.mixin.client;
 
-import net.minecraft.client.gui.screen.option.SoundOptionsScreen;
-
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import net.minecraft.client.gui.screens.SoundOptionsScreen;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,14 +27,13 @@ import top.techmczs.videoloading.client.StartupVideoConfig;
 
 /**
  * 在「音乐和声音」设置末尾追加启动视频的音量滑条。
+ * 1.20.1 没有抽象的 addOptions，选项构建在 {@code init} 里完成。
  */
 @Mixin(SoundOptionsScreen.class)
-@Environment(EnvType.CLIENT)
 public abstract class SoundOptionsScreenMixin {
-    @Inject(method = "addOptions", at = @At("TAIL"))
-    private void mvm$addStartupVideoVolume(CallbackInfo ci) {
-        // body 字段在父类 GameOptionsScreen 上，@Shadow 不可用，走 Accessor
-        ((GameOptionsScreenAccessor) this).videoloading$getBody()
-                .addSingleOptionEntry(StartupVideoConfig.volumeOption());
+    @Inject(method = "init", at = @At("TAIL"))
+    private void vl$addStartupVideoVolume(CallbackInfo ci) {
+        ((SoundOptionsScreenAccessor) this).videoloading$getList()
+                .addBig(StartupVideoConfig.volumeOption());
     }
 }

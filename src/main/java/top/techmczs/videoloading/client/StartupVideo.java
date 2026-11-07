@@ -33,18 +33,14 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
 import javax.sound.sampled.LineEvent;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.option.GameOptions;
-import net.minecraft.client.texture.NativeImage;
-import net.minecraft.client.texture.NativeImageBackedTexture;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
+import com.mojang.blaze3d.platform.NativeImage;
+import net.minecraft.Util;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.renderer.texture.DynamicTexture;import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundSource;
 
 import org.lwjgl.system.MemoryUtil;
 import org.slf4j.Logger;
@@ -53,7 +49,7 @@ import org.slf4j.LoggerFactory;
 import top.techmczs.videoloading.mixin.client.NativeImageAccessor;
 
 /**
- * 启动视频播放器：在 {@code SplashOverlay}（Mojang logo 加载界面）上
+ * 启动视频播放器：在 {@code LoadingOverlay}（Mojang logo 加载界面）上
  * 播放 mod 内置的启动视频，替代 Mojang logo。
  *
  * <p>架构：视频时长可能远超资源加载时间，无法把帧序列预先放进内存，
@@ -63,16 +59,15 @@ import top.techmczs.videoloading.mixin.client.NativeImageAccessor;
  * 而是用 {@code javax.sound.sampled} 直接播放 audio.wav。
  *
  * <p>播完策略：必须完整播完一遍才允许离开加载界面（由
- * {@code SplashOverlayMixin} 挡住 overlay 的关闭）；如果 mod 太多
+ * {@code LoadingOverlayMixin} 挡住 overlay 的关闭）；如果 mod 太多
  * 加载时间超过视频时长，视频和音频会循环播放直到加载结束。
  * 素材由 {@code scripts/prepare_startup_video.py} 从根目录的
  * video.mp4 / audio.mp3 生成。
  */
-@Environment(EnvType.CLIENT)
 public final class StartupVideo {
     private static final Logger LOGGER = LoggerFactory.getLogger("VideoLoading/StartupVideo");
 
-    private static final Identifier VIDEO_ID = Identifier.of("videoloading", "logo_video");
+    private static final ResourceLocation VIDEO_ID = new ResourceLocation("videoloading", "logo_video");
     private static final String RESOURCE_DIR = "/assets/videoloading/logo_video";
     private static final int FRAME_WIDTH = 960;
     private static final int FRAME_HEIGHT = 540;
@@ -104,7 +99,7 @@ public final class StartupVideo {
     private static final int SKIP_HEIGHT = 20;
     private static final int SKIP_MARGIN = 8;
 
-    private static NativeImageBackedTexture texture;
+    private static DynamicTexture texture;
     private static volatile boolean textureReady;
 
     private static final LinkedBlockingQueue<Frame> FREE = new LinkedBlockingQueue<>();
@@ -121,7 +116,7 @@ public final class StartupVideo {
      * 首次渲染调用时初始化：解包素材到临时目录、注册纹理、
      * 启动解码线程和音频线程。只在每次 JVM 生命周期内执行一次。
      */
-    public static void begin(MinecraftClient client) {
+    public static void begin(Minecraft client) {
         if (started) {
             return;
         }
@@ -134,8 +129,8 @@ public final class StartupVideo {
 
             NativeImage blank = new NativeImage(NativeImage.Format.RGBA, FRAME_WIDTH, FRAME_HEIGHT, false);
             blank.fillRect(0, 0, FRAME_WIDTH, FRAME_HEIGHT, 0xFF000000);
-            texture = new NativeImageBackedTexture(blank);
-            client.getTextureManager().registerTexture(VIDEO_ID, texture);
+            texture = new DynamicTexture(blank);
+            client.getTextureManager().register(VIDEO_ID, texture);
 
             for (int i = 0; i < POOL_SIZE; i++) {
                 NativeImage image = new NativeImage(NativeImage.Format.RGBA, FRAME_WIDTH, FRAME_HEIGHT, false);
@@ -148,7 +143,7 @@ public final class StartupVideo {
 
             active = true;
             running = true;
-            masterVolume = client.options.getSoundVolumeOption(SoundCategory.MASTER).getValue().floatValue();
+            masterVolume = client.options.getSoundSourceOptionInstance(SoundSource.MASTER).get().floatValue();
             applyVolume();
             Thread decoder = new Thread(() -> decodeLoop(exe, video), "VideoLoading-StartupVideoDecoder");
             decoder.setDaemon(true);
@@ -203,9 +198,9 @@ public final class StartupVideo {
 
     /**
      * 绘制当前解码帧（黑底居中、等比适配窗口）。
-     * 返回 true 表示视频会话仍然活跃，{@code SplashOverlay} 不应绘制原版 logo。
+     * 返回 true 表示视频会话仍然活跃，{@code LoadingOverlay} 不应绘制原版 logo。
      */
-    public static boolean renderFrame(DrawContext context) {
+    public static boolean renderFrame(GuiGraphics context) {
         if (!active) {
             return false;
         }        // 取出最新解码帧（丢弃积压的旧帧），全部归还缓冲池
@@ -219,13 +214,13 @@ public final class StartupVideo {
         }
         if (latest != null) {
             // 拷贝到纹理自有 image 后上传；不能用 setImage，它会 close 池里的 image
-            texture.getImage().copyFrom(latest.image());
+            texture.getPixels().copyFrom(latest.image());
             texture.upload();
             textureReady = true;
             FREE.offer(latest);
         }
-        int windowWidth = context.getScaledWindowWidth();
-        int windowHeight = context.getScaledWindowHeight();
+        int windowWidth = context.guiWidth();
+        int windowHeight = context.guiHeight();
         context.fill(0, 0, windowWidth, windowHeight, 0xFF000000);
         if (!textureReady) {
             return true;
@@ -233,36 +228,36 @@ public final class StartupVideo {
         float scale = Math.min((float) windowWidth / FRAME_WIDTH, (float) windowHeight / FRAME_HEIGHT);
         int drawWidth = Math.round(FRAME_WIDTH * scale);
         int drawHeight = Math.round(FRAME_HEIGHT * scale);
-        context.drawTexture(VIDEO_ID, (windowWidth - drawWidth) / 2, (windowHeight - drawHeight) / 2,
+        context.blit(VIDEO_ID, (windowWidth - drawWidth) / 2, (windowHeight - drawHeight) / 2,
                 drawWidth, drawHeight, 0.0F, 0.0F, FRAME_WIDTH, FRAME_HEIGHT, FRAME_WIDTH, FRAME_HEIGHT);
         return true;
     }
 
     /**
-     * 视频播放期间替代原版 {@code MessageScreen} 的 HUD：
+     * 视频播放期间替代原版 {@code GenericMessageScreen} 的 HUD：
      * 屏幕底部一条半透明横幅，居中「正在加载 Minecraft」，
      * 以及（玩家点击屏幕后）右上角的跳过按钮。
      */
-    public static void renderHud(DrawContext context) {
-        MinecraftClient client = MinecraftClient.getInstance();
-        int width = context.getScaledWindowWidth();
-        int height = context.getScaledWindowHeight();
+    public static void renderHud(GuiGraphics context) {
+        Minecraft client = Minecraft.getInstance();
+        int width = context.guiWidth();
+        int height = context.guiHeight();
 
         context.fill(0, height - 40, width, height, 0x88000000);
-        context.drawCenteredTextWithShadow(client.textRenderer,
-                Text.translatable("gui.loadingMinecraft"), width / 2, height - 26, 0xFFFFFFFF);
+        context.drawCenteredString(client.font,
+                Component.translatable("gui.loadingMinecraft"), width / 2, height - 26, 0xFFFFFFFF);
 
         if (skipShown) {
             int skipX = width - SKIP_WIDTH - SKIP_MARGIN;
             context.fill(skipX, SKIP_MARGIN, skipX + SKIP_WIDTH, SKIP_MARGIN + SKIP_HEIGHT, 0x66000000);
-            context.drawBorder(skipX, SKIP_MARGIN, SKIP_WIDTH, SKIP_HEIGHT, 0xFFFFFFFF);
-            context.drawCenteredTextWithShadow(client.textRenderer,
-                    Text.translatable(StartupVideoConfig.SKIP_KEY),
+            context.renderOutline(skipX, SKIP_MARGIN, SKIP_WIDTH, SKIP_HEIGHT, 0xFFFFFFFF);
+            context.drawCenteredString(client.font,
+                    Component.translatable(StartupVideoConfig.SKIP_KEY),
                     skipX + SKIP_WIDTH / 2, SKIP_MARGIN + (SKIP_HEIGHT - 8) / 2, 0xFFFFFFFF);
         }
     }
 
-    /** 视频期间点击（由 {@code MouseMixin} 从 {@code Mouse#onMouseButton} 转发）。 */
+    /** 视频期间点击（由 {@code MouseMixin} 从 {@code MouseHandler#onPress} 转发）。 */
     public static void onMouseClick(int x, int y) {
         if (!holdsOverlay()) {
             return;
@@ -278,7 +273,7 @@ public final class StartupVideo {
     }
 
     private static boolean isInsideSkipButton(int x, int y) {
-        int width = MinecraftClient.getInstance().getWindow().getScaledWidth();
+        int width = Minecraft.getInstance().getWindow().getGuiScaledWidth();
         int skipX = width - SKIP_WIDTH - SKIP_MARGIN;
         return x >= skipX && x < skipX + SKIP_WIDTH
                 && y >= SKIP_MARGIN && y < SKIP_MARGIN + SKIP_HEIGHT;
@@ -310,7 +305,7 @@ public final class StartupVideo {
         try {
             while (running) {
                 int frames = 0;
-                long passStart = Util.getMeasuringTimeMs();
+                long passStart = Util.getMillis();
                 Process p = new ProcessBuilder(exe.toString(), "-v", "error",
                                 "-i", video.toString(), "-f", "rawvideo", "-pix_fmt", "rgba", "pipe:1")
                         .redirectError(ProcessBuilder.Redirect.DISCARD)
@@ -338,7 +333,7 @@ public final class StartupVideo {
                         }
                         // 实时节拍：对齐 30fps，否则解码全速跑完，视频会被加速播放
                         long target = passStart + frames * 1000L / 30;
-                        long now = Util.getMeasuringTimeMs();
+                        long now = Util.getMillis();
                         if (target > now) {
                             Thread.sleep(target - now);
                         }
@@ -397,7 +392,7 @@ public final class StartupVideo {
             } catch (Exception e) {
                 LOGGER.warn("启动视频音频播放失败", e);
             }
-        }, "MoreVanillaMobs-StartupAudio");
+        }, "VideoLoading-StartupAudio");
         thread.setDaemon(true);
         thread.start();
     }

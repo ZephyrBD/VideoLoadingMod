@@ -14,25 +14,17 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-package top.techmczs.videoloading.mixin.client;
+package top.techmczs.videoloading;
 
-import net.minecraft.client.gui.screen.option.GameOptionsScreen;
-import net.minecraft.client.gui.widget.OptionListWidget;
-
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.gen.Accessor;
+import net.minecraftforge.fml.common.Mod;
 
 /**
- * 暴露 {@code GameOptionsScreen} 的选项列表，供
- * {@code SoundOptionsScreenMixin} 在子类里追加自定义选项。
- * {@code @Shadow} 不能引用父类字段，所以走 Accessor。
+ * VideoLoading mod 入口。功能全部由客户端 Mixin 驱动，这里
+ * 只负责让 FML 扫描到 mod（clientSideOnly=true 时专用服务器
+ * 不会加载本 mod）。
  */
-@Mixin(GameOptionsScreen.class)
-@Environment(EnvType.CLIENT)
-public interface GameOptionsScreenAccessor {
-    @Accessor("body")
-    OptionListWidget videoloading$getBody();
+@Mod("videoloading")
+public class VideoLoading {
+    public VideoLoading() {
+    }
 }

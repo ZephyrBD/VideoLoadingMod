@@ -23,49 +23,45 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Properties;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.client.option.SimpleOption;
-import net.minecraft.text.Text;
+import net.minecraft.client.OptionInstance;
+import net.minecraftforge.fml.loading.FMLPaths;
 
 /**
  * 启动视频的玩家配置：目前只有音量。
  *
  * <p>音量是相对主音量的系数，默认 0.5（即主音量的一半），
  * 滑条放在「音乐和声音」设置里。值持久化到独立的小配置文件，
- * 不挂进原版 {@code options.txt}（往 {@code GameOptions} 序列化里
+ * 不挂进原版 {@code options.txt}（往 {@code Options} 序列化里
  * 塞自定义项需要更大范围的 mixin）。
  */
-@Environment(EnvType.CLIENT)
 public final class StartupVideoConfig {
     private static final Path CONFIG_FILE =
-            FabricLoader.getInstance().getConfigDir().resolve("videoloading.properties");
+            FMLPaths.CONFIGDIR.get().resolve("videoloading.properties");
     private static final String KEY_VOLUME = "startupVideoVolume";
     private static final double DEFAULT_VOLUME = 0.5D;
 
-    /** 翻译 key，datagen 与运行时共用一份 */
+    /** 翻译 key，运行时共用一份 */
     public static final String VOLUME_KEY = "videoloading.startup_video.volume";
     public static final String SKIP_KEY = "videoloading.startup_video.skip";
 
-    /** 音量相对主音量的系数，0~1；修改即保存并实时作用于正在播放的音频 */
-    private static final SimpleOption<Double> VOLUME = new SimpleOption<>(
+    /** 音频相对主音量的系数，0~1；修改即保存并实时作用于正在播放的音频 */
+    private static final OptionInstance<Double> VOLUME = new OptionInstance<>(
             VOLUME_KEY,
-            SimpleOption.emptyTooltip(),
+            OptionInstance.noTooltip(),
             (label, value) -> label.copy().append(": " + Math.round(value * 100D) + "%"),
-            SimpleOption.DoubleSliderCallbacks.INSTANCE,
+            OptionInstance.UnitDouble.INSTANCE,
             loadVolume(),
             StartupVideoConfig::onVolumeChanged);
 
     private StartupVideoConfig() {
     }
 
-    public static SimpleOption<Double> volumeOption() {
+    public static OptionInstance<Double> volumeOption() {
         return VOLUME;
     }
 
     public static double getVolume() {
-        return VOLUME.getValue();
+        return VOLUME.get();
     }
 
     private static void onVolumeChanged(double value) {
@@ -94,7 +90,7 @@ public final class StartupVideoConfig {
         Properties props = new Properties();
         props.setProperty(KEY_VOLUME, String.valueOf(value));
         try (OutputStream out = Files.newOutputStream(CONFIG_FILE)) {
-            props.store(out, "MoreVanillaMobs startup video settings");
+            props.store(out, "VideoLoading startup video settings");
         } catch (IOException e) {
             // 保存失败只影响下次启动的默认值，静默即可
         }

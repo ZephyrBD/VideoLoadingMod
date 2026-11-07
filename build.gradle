@@ -1,6 +1,7 @@
 plugins {
-    id 'fabric-loom' version "${loom_version}"
+    id 'java-library'
     id 'maven-publish'
+    id 'net.neoforged.moddev.legacyforge' version "${moddev_legacy_version}"
     id 'com.github.hierynomus.license' version '0.16.1'
 }
 
@@ -11,49 +12,81 @@ base {
     archivesName = project.archives_base_name
 }
 
+// Mojang 1.20.1 发行版使用 Java 17 运行，mod 目标 Java 17
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+legacyForge {
+    enable {
+        // NeoForge 1.20.1：fork 自 Forge 47，maven 坐标仍是 net.neoforged:forge
+        // 必须用 neoForgeVersion（forgeVersion= 会走 net.minecraftforge:forge）
+        neoForgeVersion = "${minecraft_version}-${forge_version}"
+    }
+
+    // 仅保留客户端运行配置；不跑 runClient，仅用于生成正确的运行元数据
+    runs {
+        client {
+            client()
+        }
+    }
+
+    mods {
+        videoloading {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+// ===== Mixin（Forge 1.20.1 运行时为 SRG 名，必须生成 refmap）=====
+mixin {
+    add sourceSets.main, "${archives_base_name}.refmap.json"
+    config "${archives_base_name}.mixins.json"
+}
+
+dependencies {
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    // MixinExtras AP：给 @WrapOperation 等注入器的 @At 目标生成 refmap 条目
+    annotationProcessor 'io.github.llamalad7:mixinextras-common:0.5.5'
+    // Forge 1.20.1 不内置 MixinExtras：编译用 common，运行时随 jar 内嵌 forge 版
+    compileOnly 'io.github.llamalad7:mixinextras-common:0.5.5'
+    jarJar(implementation('io.github.llamalad7:mixinextras-forge:0.5.5')) {
+        version {
+            strictly '[0.5.5,0.6.0)'
+            prefer '0.5.5'
+        }
+    }
+}
+
+jar {
+    manifest.attributes([
+            'MixinConfigs': "${archives_base_name}.mixins.json"
+    ])
+}
+
+processResources {
+    inputs.property 'version', project.mod_version
+    filesMatching('META-INF/mods.toml') {
+        expand 'version': project.mod_version
+    }
+}
+
 repositories {
-    // 国内镜像优先，Fabric 官方源兜底（阿里云没有 Fabric 的 artifacts）
+    // 国内镜像优先；NeoForge maven 需直连（当前环境走代理）
     maven {
         name = 'Aliyun'
         url = 'https://maven.aliyun.com/repository/public'
     }
-    maven {
-        name = 'Fabric'
-        url = 'https://maven.fabricmc.net/'
-    }
     mavenCentral()
 }
 
-dependencies {
-    minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    // datagen 引入 Fabric API（运行时 fabric.mod.json 不声明依赖）
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-}
-
-fabricApi {
-    configureDataGeneration {
-        client = true
-    }
-}
-
-processResources {
-    inputs.property "version", project.mod_version
-
-    filesMatching("fabric.mod.json") {
-        expand "version": inputs.properties.version
-    }
-}
-
 tasks.withType(JavaCompile).configureEach {
-    it.options.release = 21
+    options.release = 17
+    options.encoding = 'UTF-8'
 }
 
 java {
     withSourcesJar()
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 jar {
