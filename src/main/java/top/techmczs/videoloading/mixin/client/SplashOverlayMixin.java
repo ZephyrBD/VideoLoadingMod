@@ -62,6 +62,10 @@ public abstract class SplashOverlayMixin {
     @Final
     private ReloadInstance reload;
 
+    @Shadow(remap = false)
+    @Final
+    private net.minecraftforge.fml.earlydisplay.DisplayWindow displayWindow;
+
     @Inject(method = "render", at = @At("HEAD"), cancellable = true, remap = false)
     private void vl$renderStartupVideo(GuiGraphics graphics, int mouseX, int mouseY, float partialTick,
             CallbackInfo ci) {
@@ -83,6 +87,10 @@ public abstract class SplashOverlayMixin {
         // 显示加载期间被 MinecraftClientMixin 推迟的主菜单
         if (this.reload.isDone() && !StartupVideo.holdsOverlay()) {
             StartupVideo.stop();
+            // 必须 close 掉 Forge 的 early display：直接 setOverlay(null) 会跳过
+            // Forge 的两阶段淡出交接，ImmediateWindowHandler 未关闭会导致
+            // 渲染停在最后一帧（主菜单已就位、音乐已播但画面冻结）
+            this.displayWindow.close();
             this.minecraft.setOverlay(null);
             Screen pending = StartupVideo.takePendingScreen();
             if (pending == null) {
