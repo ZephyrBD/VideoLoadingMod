@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "videoloading",
+	"version": "${version}",
+	"name": "VideoLoading",
+	"description": "Replaces the Minecraft loading screen with a startup video. 必须完整播放一遍视频才进入游戏，加载过慢时视频与音频循环播放。",
+	"authors": [
+		"ZephyrBD"
+	],
+	"contact": {
+		"homepage": "https://blog.techmczs.top",
+		"sources": "https://github.com/zephyrbd/VideoLoading"
+	},
+	"license": "GPL-2.0",
+	"environment": "client",
+	"mixins": [
+		"videoloading.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21"
+	}
+}

@@ -1,0 +1,91 @@
+plugins {
+    id 'fabric-loom' version "${loom_version}"
+    id 'maven-publish'
+    id 'com.github.hierynomus.license' version '0.16.1'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    // 国内镜像优先，Fabric 官方源兜底（阿里云没有 Fabric 的 artifacts）
+    maven {
+        name = 'Aliyun'
+        url = 'https://maven.aliyun.com/repository/public'
+    }
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    // MixinExtras 由 Fabric Loader 0.16.x 自带（运行与编译均可用）
+}
+
+processResources {
+    inputs.property "version", project.mod_version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": inputs.properties.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 21
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+    inputs.property "archivesName", project.base.archivesName
+
+    from("LICENSE") {
+        rename { "${it}_${inputs.properties.archivesName}" }
+    }
+}
+
+// ===== License 插件配置 =====
+license {
+    // 指定头文件
+    header rootProject.file('LICENSE-HEADER.txt')
+
+    include '**/*.java'
+
+    // Java 文件使用标准注释风格
+    mapping {
+        java = 'SLASHSTAR_STYLE'
+    }
+
+    // 排除无需检查的目录
+    exclude '**/generated/**'
+    exclude '**/META-INF/**'
+}
+
+// 每次构建前检查 license
+check.dependsOn 'licenseFormat'
+
+publishing {
+    publications {
+        create("mavenJava", MavenPublication) {
+            artifactId = project.archives_base_name
+            from components.java
+        }
+    }
+
+    repositories {
+        // 在这里配置 maven 仓库
+    }
+}
