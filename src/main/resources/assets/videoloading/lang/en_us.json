@@ -1,4 +1,5 @@
 {
   "videoloading.startup_video.skip": "Skip",
-  "videoloading.startup_video.volume": "Startup Video Volume"
+  "videoloading.startup_video.volume": "Startup Video Volume",
+  "gui.loadingMinecraft": "Loading Minecraft"
 }
