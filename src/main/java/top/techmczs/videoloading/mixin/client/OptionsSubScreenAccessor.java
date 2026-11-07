@@ -14,22 +14,21 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-package top.techmczs.videoloading.datagen;
+package top.techmczs.videoloading.mixin.client;
 
-import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.client.gui.components.OptionsList;
+import net.minecraft.client.gui.screens.options.OptionsSubScreen;
 
-import top.techmczs.videoloading.datagen.languages.ModENUSProvider;
-import top.techmczs.videoloading.datagen.languages.ModZHCNProvider;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.gen.Accessor;
 
 /**
- * 数据生成入口：目前只生成语言文件（en_us / zh_cn）。
+ * 暴露 {@code OptionsSubScreen} 的选项列表，供
+ * {@code SoundOptionsScreenMixin} 在子类里追加自定义选项。
+ * {@code @Shadow} 不能引用父类字段，所以走 Accessor。
  */
-public class VideoLoadingDataGenerator implements DataGeneratorEntrypoint {
-    @Override
-    public void onInitializeDataGenerator(FabricDataGenerator generator) {
-        FabricDataGenerator.Pack pack = generator.createPack();
-        pack.addProvider(ModENUSProvider::new);
-        pack.addProvider(ModZHCNProvider::new);
-    }
+@Mixin(OptionsSubScreen.class)
+public interface OptionsSubScreenAccessor {
+    @Accessor("list")
+    OptionsList videoloading$getList();
 }

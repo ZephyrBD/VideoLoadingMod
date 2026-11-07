@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version "${loom_version}"
+    id 'net.neoforged.moddev' version '2.0.148'
     id 'maven-publish'
     id 'com.github.hierynomus.license' version '0.16.1'
 }
@@ -11,37 +11,49 @@ base {
     archivesName = project.archives_base_name
 }
 
+neoForge {
+    version = project.neoforge_version
+
+    runs {
+        client {
+            client()
+        }
+    }
+
+    mods {
+        videoloading {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
 repositories {
-    // 国内镜像优先，Fabric 官方源兜底（阿里云没有 Fabric 的 artifacts）
+    // 国内镜像优先
     maven {
         name = 'Aliyun'
         url = 'https://maven.aliyun.com/repository/public'
     }
+    // NeoForge 官方 maven（maven.neoforged.net）国内 DNS 污染不可达，
+    // 用 CreeperHost / BMCLAPI 镜像（CreeperHost 元数据齐全，BMCLAPI 仅有 jar）
     maven {
-        name = 'Fabric'
-        url = 'https://maven.fabricmc.net/'
+        name = 'CreeperHost'
+        url = 'https://maven.creeperhost.net/'
+    }
+    maven {
+        name = 'BMCLAPI'
+        url = 'https://bmclapi2.bangbang93.com/maven/'
+    }
+    maven {
+        name = 'NeoForged'
+        url = 'https://maven.neoforged.net/releases'
     }
     mavenCentral()
-}
-
-dependencies {
-    minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    // datagen 引入 Fabric API（运行时 fabric.mod.json 不声明依赖）
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-}
-
-fabricApi {
-    configureDataGeneration {
-        client = true
-    }
 }
 
 processResources {
     inputs.property "version", project.mod_version
 
-    filesMatching("fabric.mod.json") {
+    filesMatching("META-INF/neoforge.mods.toml") {
         expand "version": inputs.properties.version
     }
 }
