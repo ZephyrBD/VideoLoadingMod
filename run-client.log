@@ -2,356 +2,11 @@
 > Task :processResources UP-TO-DATE
 > Task :classes UP-TO-DATE
 > Task :downloadMcpConfig
-> Task :extractSrg
-> Task :createSrgToMcp
-> Task :downloadMCMeta
-
-> Task :downloadAssets
-Downloading: https://piston-meta.mojang.com/v1/packages/4ca8e1a1edd37a703c5d1594f71d409852cd9770/17.json
-
-Downloading: https://resources.download.minecraft.net/f4/f40266672fa6cd5c678cbfd5a7fdcfe06e30c629 Asset: minecraft/font/include/unifont.json
-Downloading: https://resources.download.minecraft.net/66/666999116c467f10622db1527a06ddc0a6efad2a Asset: minecraft/font/unifont.zip
-Downloading: https://resources.download.minecraft.net/92/92ab1f42958051008cf66c9f551adf12139f89ab Asset: minecraft/font/unifont_jp.zip
-Downloading: https://resources.download.minecraft.net/3d/3dad5156cfe62be96666a99adc719a8f0869dc78 Asset: minecraft/resourcepacks/high_contrast.zip
-Downloading: https://resources.download.minecraft.net/d1/d19a3a30b12a131de2dcd89f2d17c43aee7588b6 Asset: minecraft/resourcepacks/programmer_art.zip
-Downloading: https://resources.download.minecraft.net/09/09eab141cce7550f9a74c65db0e9abbb342cf50f Asset: minecraft/sounds.json
-Downloading: https://resources.download.minecraft.net/56/56880bed78b91dddde4a84e10402f957cfc05144 Asset: minecraft/sounds/ambient/cave/cave20.ogg
-Downloading: https://resources.download.minecraft.net/82/82e475bcaaf956cd4fdc029a757d4fcd9b25b9cb Asset: minecraft/sounds/ambient/cave/cave21.ogg
-Downloading: https://resources.download.minecraft.net/b6/b60ab8b15b9763f8fd55dcaedab74d8eb2d45d53 Asset: minecraft/sounds/ambient/cave/cave22.ogg
-Downloading: https://resources.download.minecraft.net/7c/7c35e7cf6e530d662210be0ee8ef8cd44be3e654 Asset: minecraft/sounds/ambient/cave/cave23.ogg
-Downloading: https://resources.download.minecraft.net/dc/dc9fca5c84d47e4de613cb3f90ef6369ab070b11 Asset: minecraft/sounds/block/cobweb/break1.ogg
-Downloading: https://resources.download.minecraft.net/2e/2ee314ed953458720e3163bccb97b88f08649f52 Asset: minecraft/sounds/block/cobweb/break2.ogg
-Downloading: https://resources.download.minecraft.net/14/14a69acea92b011aefde17452179a290815de170 Asset: minecraft/sounds/block/cobweb/break3.ogg
-Downloading: https://resources.download.minecraft.net/df/df58a02eab54f8105c40ee6f97b698c2ff203462 Asset: minecraft/sounds/block/cobweb/break4.ogg
-Downloading: https://resources.download.minecraft.net/42/421214a72c9a67bf92f66a26d78f058a39f57a4c Asset: minecraft/sounds/block/cobweb/break5.ogg
-Downloading: https://resources.download.minecraft.net/5a/5a01ef120c2b29f2f4bfabc5febf25fbe38620bc Asset: minecraft/sounds/block/cobweb/break6.ogg
-Downloading: https://resources.download.minecraft.net/5c/5c4ae57d8ff29ed4adfc3f5f5b2a685acc41d168 Asset: minecraft/sounds/block/cobweb/step1.ogg
-Downloading: https://resources.download.minecraft.net/70/70a56b0f1157165689343b2307b67bc973716cd8 Asset: minecraft/sounds/block/cobweb/step2.ogg
-Downloading: https://resources.download.minecraft.net/fe/fe0338d5ad76a7f122ea4736c14d6150e4de4a8e Asset: minecraft/sounds/block/cobweb/step3.ogg
-Downloading: https://resources.download.minecraft.net/16/1652eefa61aa315e59b608188343417c3e303ebb Asset: minecraft/sounds/block/cobweb/step4.ogg
-Downloading: https://resources.download.minecraft.net/54/54bec018a6299995d114c41638fbf90dab400102 Asset: minecraft/sounds/block/cobweb/step5.ogg
-Downloading: https://resources.download.minecraft.net/d8/d87f3255f33071b4dc131e4e5bcfd0394db82b17 Asset: minecraft/sounds/block/cobweb/step6.ogg
-Downloading: https://resources.download.minecraft.net/10/10b623aa5b21f3eebd19b0ad6cc6703c5ac4e9d1 Asset: minecraft/sounds/block/copper_bulb/break1.ogg
-Downloading: https://resources.download.minecraft.net/43/43d226ad60714e32737509567d016fd5a675eb57 Asset: minecraft/sounds/block/copper_bulb/break2.ogg
-Downloading: https://resources.download.minecraft.net/0f/0fec721082e69afd88f9be89e4831e1d266fd2a7 Asset: minecraft/sounds/block/copper_bulb/break3.ogg
-Downloading: https://resources.download.minecraft.net/82/826f002c21ee2c9a51ca9280ac3f5bdd855c662d Asset: minecraft/sounds/block/copper_bulb/break4.ogg
-Downloading: https://resources.download.minecraft.net/84/8430e3673038b169b61935adc98f3473621cca80 Asset: minecraft/sounds/block/copper_bulb/place1.ogg
-Downloading: https://resources.download.minecraft.net/7d/7df37f33cfd6d060b944f8ffa7ba801c811711aa Asset: minecraft/sounds/block/copper_bulb/place2.ogg
-Downloading: https://resources.download.minecraft.net/0f/0fcb21c89b90384789ea4a54ef1eb8256c3df4ab Asset: minecraft/sounds/block/copper_bulb/place3.ogg
-Downloading: https://resources.download.minecraft.net/3d/3dedbbbb6ecfbebcf98d854b44da4e55c9196852 Asset: minecraft/sounds/block/copper_bulb/place4.ogg
-Downloading: https://resources.download.minecraft.net/6e/6e80458f40be727bcf5f64c653326e0a0d522977 Asset: minecraft/sounds/block/copper_bulb/step1.ogg
-Downloading: https://resources.download.minecraft.net/c6/c63105ce3c8e64d4fbf95b51713903af4e05d0db Asset: minecraft/sounds/block/copper_bulb/step2.ogg
-Downloading: https://resources.download.minecraft.net/0b/0b790ee239b6c7153a94f124a0abcbb7a0597706 Asset: minecraft/sounds/block/copper_bulb/step3.ogg
-Downloading: https://resources.download.minecraft.net/8a/8ac3774edb98da4a3494f8b8dfb73f8e4e6d2536 Asset: minecraft/sounds/block/copper_bulb/step4.ogg
-Downloading: https://resources.download.minecraft.net/a7/a7d5bf52fdf2132de5347310a0a7d69cd9c7b016 Asset: minecraft/sounds/block/copper_bulb/step5.ogg
-Downloading: https://resources.download.minecraft.net/01/01e7eb96475342f7418a19c2a274632bdea17d98 Asset: minecraft/sounds/block/copper_bulb/step6.ogg
-Downloading: https://resources.download.minecraft.net/0d/0d32a999e36b54b3d1ff2e6c8f9e7d7cb0db4cc4 Asset: minecraft/sounds/block/copper_bulb/toggle.ogg
-Downloading: https://resources.download.minecraft.net/a8/a8ea19293307367c50bc099f4996e8de1605f46f Asset: minecraft/sounds/block/copper_door/toggle1.ogg
-Downloading: https://resources.download.minecraft.net/bc/bccb2d97e5255caa98b2991bb1de8cea3f92d1a1 Asset: minecraft/sounds/block/copper_door/toggle2.ogg
-Downloading: https://resources.download.minecraft.net/14/149fe2032b2da16b1afe7f20f2dd417f00b19661 Asset: minecraft/sounds/block/copper_door/toggle3.ogg
-Downloading: https://resources.download.minecraft.net/41/41a66147f1fa43c6662fa5d32421bc7c5df1351c Asset: minecraft/sounds/block/copper_grate/break1.ogg
-Downloading: https://resources.download.minecraft.net/4a/4a17f13123024ae444e0d38cb414de1d32de674f Asset: minecraft/sounds/block/copper_grate/break2.ogg
-Downloading: https://resources.download.minecraft.net/40/4035b48a2202e98cf546f6b4c6d3152416cc65b8 Asset: minecraft/sounds/block/copper_grate/break3.ogg
-Downloading: https://resources.download.minecraft.net/7e/7ea9c737250ddc0ce2591dd772d0c163c867a83a Asset: minecraft/sounds/block/copper_grate/break4.ogg
-Downloading: https://resources.download.minecraft.net/55/5561e168924657cd67edfd095725cf4f00c92e62 Asset: minecraft/sounds/block/copper_grate/step1.ogg
-Downloading: https://resources.download.minecraft.net/1f/1f218dcb6948bbbabc47d389e278bd6cb0a5c9e1 Asset: minecraft/sounds/block/copper_grate/step2.ogg
-Downloading: https://resources.download.minecraft.net/a7/a76c13da1853f03a4c4eb0d90bbd141b7542f644 Asset: minecraft/sounds/block/copper_grate/step3.ogg
-Downloading: https://resources.download.minecraft.net/cb/cbe94d52bad4fef747930aa6b0091e305e9a4b3f Asset: minecraft/sounds/block/copper_grate/step4.ogg
-Downloading: https://resources.download.minecraft.net/48/48d6cf4b8b1621ef0310e1f26551234c086b42d8 Asset: minecraft/sounds/block/copper_grate/step5.ogg
-Downloading: https://resources.download.minecraft.net/ab/abfac9a19a1858c70c0888f88642b69c4e7b26e8 Asset: minecraft/sounds/block/copper_grate/step6.ogg
-Downloading: https://resources.download.minecraft.net/65/654ad210a1b5d7509ff3522bc884c00820ebe87e Asset: minecraft/sounds/block/copper_trapdoor/toggle1.ogg
-Downloading: https://resources.download.minecraft.net/3e/3ef60857a51b2e76ca6b12e7668edb28bd474c8d Asset: minecraft/sounds/block/copper_trapdoor/toggle2.ogg
-Downloading: https://resources.download.minecraft.net/bc/bc4bc17fc30b2ac970ed15f0902b30ce9c5f2f98 Asset: minecraft/sounds/block/copper_trapdoor/toggle3.ogg
-Downloading: https://resources.download.minecraft.net/44/44cc77afa1a45e4fc254a2a9660acc2464bbda73 Asset: minecraft/sounds/block/copper_trapdoor/toggle4.ogg
-Downloading: https://resources.download.minecraft.net/40/40a534629cc459cfe6bb104843e92a132c922046 Asset: minecraft/sounds/block/crafter/craft.ogg
-Downloading: https://resources.download.minecraft.net/60/606b100c5dc4c965c5714bc6d02a68eda6b3c902 Asset: minecraft/sounds/block/crafter/fail.ogg
-Downloading: https://resources.download.minecraft.net/0b/0b1b76e9d84bc193ec7d9aa11027a3b1e40f4d24 Asset: minecraft/sounds/block/decorated_pot/break1.ogg
-Downloading: https://resources.download.minecraft.net/a7/a7c7b14d8c561a8ebeb04b9becd5bf9b8e587c51 Asset: minecraft/sounds/block/decorated_pot/break2.ogg
-Downloading: https://resources.download.minecraft.net/c2/c2d3d32316d7692a54cc7a72b0dff6f668cef4c1 Asset: minecraft/sounds/block/decorated_pot/break3.ogg
-Downloading: https://resources.download.minecraft.net/eb/eb04db6e76530e39f99d9a8b56dcf0cdc51933a9 Asset: minecraft/sounds/block/decorated_pot/break4.ogg
-Downloading: https://resources.download.minecraft.net/04/046116cb8bae23fb9ccd08664bea0ea1e6fa5b8c Asset: minecraft/sounds/block/decorated_pot/insert1.ogg
-Downloading: https://resources.download.minecraft.net/8b/8bea2393e701b61d9f2d197b6fe2d64d870ce69f Asset: minecraft/sounds/block/decorated_pot/insert2.ogg
-Downloading: https://resources.download.minecraft.net/5d/5df3937b1dc42801133faa7db0777993001a0e6c Asset: minecraft/sounds/block/decorated_pot/insert3.ogg
-Downloading: https://resources.download.minecraft.net/12/12bd95f693faa4c5992bb3fc622d447d5e15cd8b Asset: minecraft/sounds/block/decorated_pot/insert4.ogg
-Downloading: https://resources.download.minecraft.net/fd/fdae34c44ad48989b28d90188ea926292e994d68 Asset: minecraft/sounds/block/decorated_pot/insert_fail1.ogg
-Downloading: https://resources.download.minecraft.net/33/335dd7a03f2a9e96de2b70a6c437b9d7e478e057 Asset: minecraft/sounds/block/decorated_pot/insert_fail2.ogg
-Downloading: https://resources.download.minecraft.net/32/32932435c2ff25af10f51f3900164ba650baf264 Asset: minecraft/sounds/block/decorated_pot/insert_fail3.ogg
-Downloading: https://resources.download.minecraft.net/c5/c5c6fc4088ca077f78f610ba6818f53b44ac8b18 Asset: minecraft/sounds/block/decorated_pot/insert_fail4.ogg
-Downloading: https://resources.download.minecraft.net/e6/e6c07deee281fc48ec09ae5b46cc7f4f6025e34f Asset: minecraft/sounds/block/decorated_pot/insert_fail5.ogg
-Downloading: https://resources.download.minecraft.net/62/62d22654ef2de2e990eec0871030e41ea0ea41d9 Asset: minecraft/sounds/block/decorated_pot/shatter1.ogg
-Downloading: https://resources.download.minecraft.net/d2/d2fcc19ba39f8cc7ca4e780c1b6a8a500d9e8862 Asset: minecraft/sounds/block/decorated_pot/shatter2.ogg
-Downloading: https://resources.download.minecraft.net/cd/cda36c2c0cc4428cb7c8fd3857f1597ae906c35b Asset: minecraft/sounds/block/decorated_pot/shatter3.ogg
-Downloading: https://resources.download.minecraft.net/5f/5faa68db1a4b77ed66a0a7e412d6b26156fba2b7 Asset: minecraft/sounds/block/decorated_pot/shatter4.ogg
-Downloading: https://resources.download.minecraft.net/da/da34d96320ca548f68ccb08b8b6fead88f678184 Asset: minecraft/sounds/block/decorated_pot/shatter5.ogg
-Downloading: https://resources.download.minecraft.net/49/49aaa18e07b554c4760aa82ed3b87fcd8bc000fb Asset: minecraft/sounds/block/decorated_pot/step1.ogg
-Downloading: https://resources.download.minecraft.net/1c/1c6a079997bb8f67a55378e1917c23e45c08b055 Asset: minecraft/sounds/block/decorated_pot/step2.ogg
-Downloading: https://resources.download.minecraft.net/2e/2e14fecfe60ce332a014da7508c59b8f05710532 Asset: minecraft/sounds/block/decorated_pot/step3.ogg
-Downloading: https://resources.download.minecraft.net/ff/ff5aa6b98b27f989cf147d518303e335ef405e15 Asset: minecraft/sounds/block/decorated_pot/step4.ogg
-Downloading: https://resources.download.minecraft.net/ff/ff5a345dc979cc817c1ac87221abb372a3b87a5c Asset: minecraft/sounds/block/decorated_pot/step5.ogg
-Downloading: https://resources.download.minecraft.net/a2/a29251cdc7c577524079dfc850af830d058a6af1 Asset: minecraft/sounds/block/heavy_core/break1.ogg
-Downloading: https://resources.download.minecraft.net/bd/bd6d8184b282408937f17485ed1b22ccca29b596 Asset: minecraft/sounds/block/heavy_core/break2.ogg
-Downloading: https://resources.download.minecraft.net/59/59cc8b47d9e893e6e329ae8477f3bcb7ef71166f Asset: minecraft/sounds/block/heavy_core/break3.ogg
-Downloading: https://resources.download.minecraft.net/96/96a21a8fa4e8bbbdc2eaf3b720ffb9f9234b8c93 Asset: minecraft/sounds/block/heavy_core/break4.ogg
-Downloading: https://resources.download.minecraft.net/dc/dc56f8df079d60537f0f80f5d3591978b57fc3e0 Asset: minecraft/sounds/block/heavy_core/step1.ogg
-Downloading: https://resources.download.minecraft.net/32/32fc1de73bff063b077720ab0c3065b9c03e8e83 Asset: minecraft/sounds/block/heavy_core/step2.ogg
-Downloading: https://resources.download.minecraft.net/e2/e2205fc1d79fc56f27acbbea80bb9003179b4207 Asset: minecraft/sounds/block/heavy_core/step3.ogg
-Downloading: https://resources.download.minecraft.net/58/5803b4caae0b3e7895f6e7f7be0b2d0b4066a92f Asset: minecraft/sounds/block/heavy_core/step4.ogg
-Downloading: https://resources.download.minecraft.net/bc/bc53fd681563d0fb9b628cbc503cdc887b4516b6 Asset: minecraft/sounds/block/spawner/break1.ogg
-Downloading: https://resources.download.minecraft.net/b7/b704e41aa773e6cc6c2798aed510710bc7f1ae29 Asset: minecraft/sounds/block/spawner/break2.ogg
-Downloading: https://resources.download.minecraft.net/bb/bbc6b7f7a46d36b5de2e2055a513a6128b3f761c Asset: minecraft/sounds/block/spawner/break3.ogg
-Downloading: https://resources.download.minecraft.net/e1/e123f1f349dbe33f92d1f6dc1f632b2a7c075e42 Asset: minecraft/sounds/block/spawner/break4.ogg
-Downloading: https://resources.download.minecraft.net/ca/ca4e7405ba5bfabbf393b2e5d00a0c1b11f6b456 Asset: minecraft/sounds/block/spawner/step1.ogg
-Downloading: https://resources.download.minecraft.net/73/73698a2d0e2335e6b2985df499e08101ee676a98 Asset: minecraft/sounds/block/spawner/step2.ogg
-Downloading: https://resources.download.minecraft.net/9e/9e1630ebca398e4bf3113b8834e210dc33b39275 Asset: minecraft/sounds/block/spawner/step3.ogg
-Downloading: https://resources.download.minecraft.net/ee/eefa204eced915026862ddf7a7465863c04a3eab Asset: minecraft/sounds/block/spawner/step4.ogg
-Downloading: https://resources.download.minecraft.net/56/56ed141e6438cec8b57604c9e75bcf0cf87d409b Asset: minecraft/sounds/block/spawner/step5.ogg
-Downloading: https://resources.download.minecraft.net/3a/3aa16dc0cb98b207552d722f759be8ef7712ee40 Asset: minecraft/sounds/block/sponge/absorb1.ogg
-Downloading: https://resources.download.minecraft.net/43/431c1513bd7d75ee6eb20cad361551274d5d08a0 Asset: minecraft/sounds/block/sponge/absorb2.ogg
-Downloading: https://resources.download.minecraft.net/00/0084f65e6832508990fb3dbf010daded53538c03 Asset: minecraft/sounds/block/sponge/absorb3.ogg
-Downloading: https://resources.download.minecraft.net/72/729942857a51357dcbee04a584abe0df32a4232b Asset: minecraft/sounds/block/sponge/break1.ogg
-Downloading: https://resources.download.minecraft.net/28/2854dd6357cb53acc808c890244d42c60a0610fd Asset: minecraft/sounds/block/sponge/break2.ogg
-Downloading: https://resources.download.minecraft.net/e7/e74fa6b2d60aa73be422c82b30e33c16d9da35e0 Asset: minecraft/sounds/block/sponge/break3.ogg
-Downloading: https://resources.download.minecraft.net/ea/ea36dd93f8250459938aefb0f9d596f1392fc8fa Asset: minecraft/sounds/block/sponge/break4.ogg
-Downloading: https://resources.download.minecraft.net/8b/8ba533372b6f1a52fb8a24bb58eebfaf61f807d0 Asset: minecraft/sounds/block/sponge/step1.ogg
-Downloading: https://resources.download.minecraft.net/b5/b5b06482cf5054fc45b75d61e35e8c0325782b48 Asset: minecraft/sounds/block/sponge/step2.ogg
-Downloading: https://resources.download.minecraft.net/22/22ca3b48d2e6110484c0e32dff16aef236ead168 Asset: minecraft/sounds/block/sponge/step3.ogg
-Downloading: https://resources.download.minecraft.net/99/99ea2d461460f0f4d4f3908d3a8298265d0746bc Asset: minecraft/sounds/block/sponge/step4.ogg
-Downloading: https://resources.download.minecraft.net/9e/9efc43b5f5103fbc7f1caf56c22bde1474e4b121 Asset: minecraft/sounds/block/sponge/step5.ogg
-Downloading: https://resources.download.minecraft.net/13/13133a9d079f049f6600e910527f4758fa46bd2e Asset: minecraft/sounds/block/sponge/step6.ogg
-Downloading: https://resources.download.minecraft.net/e2/e2cdfe61fc018d84bba507fcdc76545809b0576f Asset: minecraft/sounds/block/sponge/wet_sponge/break1.ogg
-Downloading: https://resources.download.minecraft.net/8d/8d45ab2bc4daa17ea7a923b7f14f3312cc451dd3 Asset: minecraft/sounds/block/sponge/wet_sponge/break2.ogg
-Downloading: https://resources.download.minecraft.net/aa/aac72c558a3bf69e9a4c83defd1b104141cd6577 Asset: minecraft/sounds/block/sponge/wet_sponge/break3.ogg
-Downloading: https://resources.download.minecraft.net/95/953629d54e08a4bf652aa6d2a338727a21a4b1f4 Asset: minecraft/sounds/block/sponge/wet_sponge/break4.ogg
-Downloading: https://resources.download.minecraft.net/0c/0ca6d01e68ebf7e8b6d54a2d44515dd007315d27 Asset: minecraft/sounds/block/sponge/wet_sponge/step1.ogg
-Downloading: https://resources.download.minecraft.net/b8/b81d84b6d8ef123324f4f58d99aa51a0d4914b98 Asset: minecraft/sounds/block/sponge/wet_sponge/step2.ogg
-Downloading: https://resources.download.minecraft.net/2b/2bd332e7b7783ae10e846a51a0fb7209f892b540 Asset: minecraft/sounds/block/sponge/wet_sponge/step3.ogg
-Downloading: https://resources.download.minecraft.net/c1/c1635cc0219e601297a6d47f2d5cc3d109787525 Asset: minecraft/sounds/block/sponge/wet_sponge/step4.ogg
-Downloading: https://resources.download.minecraft.net/ef/ef5d4c64b62a616a2556e24714cf919603205b2f Asset: minecraft/sounds/block/trial_spawner/about_to_spawn_item.ogg
-Downloading: https://resources.download.minecraft.net/60/60f48749f8f5f0de797549f7079b0f2682462bfd Asset: minecraft/sounds/block/trial_spawner/ambient1.ogg
-Downloading: https://resources.download.minecraft.net/96/965a270ab94a7bdd4fd6035e9657236acef845c9 Asset: minecraft/sounds/block/trial_spawner/ambient2.ogg
-Downloading: https://resources.download.minecraft.net/5c/5c2c79ef9f1997785a709921471078e1387b558c Asset: minecraft/sounds/block/trial_spawner/ambient3.ogg
-Downloading: https://resources.download.minecraft.net/70/7080c902ae1a7544d22f4c7c57a85326231f47c4 Asset: minecraft/sounds/block/trial_spawner/ambient4.ogg
-Downloading: https://resources.download.minecraft.net/3f/3f432f4a1fe80bea3724725d55a838d211296729 Asset: minecraft/sounds/block/trial_spawner/ambient5.ogg
-Downloading: https://resources.download.minecraft.net/e2/e245e3d5d274a89eb77aadffaa15e0345facc2f9 Asset: minecraft/sounds/block/trial_spawner/ambient_ominous1.ogg
-Downloading: https://resources.download.minecraft.net/a9/a9d3c0fac2eb23857da0f0739962dd525520f9e4 Asset: minecraft/sounds/block/trial_spawner/ambient_ominous2.ogg
-Downloading: https://resources.download.minecraft.net/93/93328c26123ec8d2f88545b91cdc5aa12cdf2c32 Asset: minecraft/sounds/block/trial_spawner/ambient_ominous3.ogg
-Downloading: https://resources.download.minecraft.net/93/93e96d9dfcbc4c0eab2c1576c8f2560b22d3558e Asset: minecraft/sounds/block/trial_spawner/ambient_ominous4.ogg
-Downloading: https://resources.download.minecraft.net/8f/8f3010cc63c87674e82b487519dcad7eb6319553 Asset: minecraft/sounds/block/trial_spawner/ambient_ominous5.ogg
-Downloading: https://resources.download.minecraft.net/01/01644fe4c50b2ac1c68897171d483bd9ef8bb482 Asset: minecraft/sounds/block/trial_spawner/break1.ogg
-Downloading: https://resources.download.minecraft.net/25/25d946823bfe74465b6b099461a6b76ebf585e84 Asset: minecraft/sounds/block/trial_spawner/break2.ogg
-Downloading: https://resources.download.minecraft.net/73/73195a35ab094a02787f06cc6a0f2f525cb6a245 Asset: minecraft/sounds/block/trial_spawner/break3.ogg
-Downloading: https://resources.download.minecraft.net/64/64cebd4a2cca255cad79825da3c68f8ab8df8a5f Asset: minecraft/sounds/block/trial_spawner/close_shutter.ogg
-Downloading: https://resources.download.minecraft.net/76/76c2271026bcf9cbaf16dc1c45942ccacaed1ad6 Asset: minecraft/sounds/block/trial_spawner/detect_player1.ogg
-Downloading: https://resources.download.minecraft.net/e7/e7341254e0a5ae36234413f8db2ed1fbf65cbc29 Asset: minecraft/sounds/block/trial_spawner/detect_player2.ogg
-Downloading: https://resources.download.minecraft.net/1d/1d9a3a8ed523ee760778931a7195df9475685ca7 Asset: minecraft/sounds/block/trial_spawner/detect_player3.ogg
-Downloading: https://resources.download.minecraft.net/1d/1dedc4dacb1e77d5f306e27f0151faff33122f12 Asset: minecraft/sounds/block/trial_spawner/eject_item1.ogg
-Downloading: https://resources.download.minecraft.net/98/9889db33f5ea6e24c0aba9db8840f8ad93aa1ebf Asset: minecraft/sounds/block/trial_spawner/ominous_activate.ogg
-Downloading: https://resources.download.minecraft.net/1f/1fe672d2cc31b1c9aacac9a29d34ec085bd9139b Asset: minecraft/sounds/block/trial_spawner/open_shutter.ogg
-Downloading: https://resources.download.minecraft.net/6d/6d21c07cf9af1fbe2f4ebbcfb8c7aa4796e6eab6 Asset: minecraft/sounds/block/trial_spawner/place1.ogg
-Downloading: https://resources.download.minecraft.net/a0/a0ec9ff35ecff8291949501b1f304c5b2359c4d8 Asset: minecraft/sounds/block/trial_spawner/place2.ogg
-Downloading: https://resources.download.minecraft.net/d9/d9dc932309a74282182529c6b293cec74d6ac5eb Asset: minecraft/sounds/block/trial_spawner/place3.ogg
-Downloading: https://resources.download.minecraft.net/36/3608722543847655288247fa525a1fa049a5aa08 Asset: minecraft/sounds/block/trial_spawner/spawn1.ogg
-Downloading: https://resources.download.minecraft.net/59/59f4b7fc2d26a2c35125c97c6c535f545ea92fd8 Asset: minecraft/sounds/block/trial_spawner/spawn2.ogg
-Downloading: https://resources.download.minecraft.net/58/58fdda424b9be880eca4a9da0d0aaf6ede10b4d2 Asset: minecraft/sounds/block/trial_spawner/spawn3.ogg
-Downloading: https://resources.download.minecraft.net/4c/4c6ef668e5a68fec125882632b143a5ffc3f4438 Asset: minecraft/sounds/block/trial_spawner/spawn4.ogg
-Downloading: https://resources.download.minecraft.net/0c/0c1d9fe6dbbed36a6b2a1fb90964babbe161bc22 Asset: minecraft/sounds/block/trial_spawner/spawn_item1.ogg
-Downloading: https://resources.download.minecraft.net/ac/ac92c363a6204ea7a0f67f62ffac2984e434a80f Asset: minecraft/sounds/block/trial_spawner/spawn_item2.ogg
-Downloading: https://resources.download.minecraft.net/14/149305e67306ba3a64a1f1a2a114b031c86c9eae Asset: minecraft/sounds/block/trial_spawner/spawn_item3.ogg
-Downloading: https://resources.download.minecraft.net/3c/3c7b02d6f14374133a5547541abb204310cc7835 Asset: minecraft/sounds/block/trial_spawner/spawn_item_begin1.ogg
-Downloading: https://resources.download.minecraft.net/7f/7f6352836fc2b50256a151e870f9471358d18163 Asset: minecraft/sounds/block/trial_spawner/spawn_item_begin2.ogg
-Downloading: https://resources.download.minecraft.net/2e/2efe09834496f1b3a85de27b60e3e182778c5eee Asset: minecraft/sounds/block/trial_spawner/spawn_item_begin3.ogg
-Downloading: https://resources.download.minecraft.net/fb/fbe526c75463e454bba0725fc89fba09259f8826 Asset: minecraft/sounds/block/trial_spawner/step1.ogg
-Downloading: https://resources.download.minecraft.net/c3/c38f4b940b6ab8ef01e2faa0ae1e023d3cf167c5 Asset: minecraft/sounds/block/trial_spawner/step2.ogg
-Downloading: https://resources.download.minecraft.net/27/276cd4df500c8e230b5a7c57af249888e320c41c Asset: minecraft/sounds/block/trial_spawner/step3.ogg
-Downloading: https://resources.download.minecraft.net/9a/9a4787ab4d579b8b03c70a1fa1552a14fc89608b Asset: minecraft/sounds/block/trial_spawner/step4.ogg
-Downloading: https://resources.download.minecraft.net/1c/1c8cf9427698ee08d28de9ee188538906d0d575e Asset: minecraft/sounds/block/trial_spawner/step5.ogg
-Downloading: https://resources.download.minecraft.net/fc/fc36451a9f94866223c4cabe2563d8190c075466 Asset: minecraft/sounds/block/tuff_bricks/place1.ogg
-Downloading: https://resources.download.minecraft.net/1f/1fd3b994ec940d0cadd370ef1065ddbef2d3f2be Asset: minecraft/sounds/block/tuff_bricks/place2.ogg
-Downloading: https://resources.download.minecraft.net/e2/e20b5088cd0a40f31d71b110821f813a6a94a133 Asset: minecraft/sounds/block/tuff_bricks/place3.ogg
-Downloading: https://resources.download.minecraft.net/41/4122b4543f909f13b37f004bc3eebc3e72378b00 Asset: minecraft/sounds/block/tuff_bricks/place4.ogg
-Downloading: https://resources.download.minecraft.net/3e/3e8e9951129c4ae1b44baa158f935f53fe519b8f Asset: minecraft/sounds/block/tuff_bricks/place5.ogg
-Downloading: https://resources.download.minecraft.net/e6/e647d4054c342033fcb17c2a0e42e46dc1bd9ce8 Asset: minecraft/sounds/block/tuff_bricks/step1.ogg
-Downloading: https://resources.download.minecraft.net/0b/0bf0724e4623e853a1aea6edb2eb8c42131231ee Asset: minecraft/sounds/block/tuff_bricks/step2.ogg
-Downloading: https://resources.download.minecraft.net/ef/ef7dfffb7e1cbaf4b764d9de86dfc8545b1a4b25 Asset: minecraft/sounds/block/tuff_bricks/step3.ogg
-Downloading: https://resources.download.minecraft.net/4f/4f48c9696dd3b8dd08713e3bc75002599d382de5 Asset: minecraft/sounds/block/tuff_bricks/step4.ogg
-Downloading: https://resources.download.minecraft.net/89/892c046fcb58d0e5f267688d1d6f874909b2b0d7 Asset: minecraft/sounds/block/tuff_bricks/step5.ogg
-Downloading: https://resources.download.minecraft.net/7b/7be841b7e39f91360fcd74cb352652d38e60f44a Asset: minecraft/sounds/block/tuff_bricks/step6.ogg
-Downloading: https://resources.download.minecraft.net/73/73df1a455ae665dc711edc5471740f4415f3a30d Asset: minecraft/sounds/block/vault/activate.ogg
-Downloading: https://resources.download.minecraft.net/9a/9a4c49e84a299e46023d6b122c7998016dbaf697 Asset: minecraft/sounds/block/vault/ambient1.ogg
-Downloading: https://resources.download.minecraft.net/3d/3d5e61ca95a5dc872292f784ab4e09f0a2be8d5e Asset: minecraft/sounds/block/vault/ambient2.ogg
-Downloading: https://resources.download.minecraft.net/b4/b43d142ae612e9a703fde61b811a83ae88bc5e9c Asset: minecraft/sounds/block/vault/ambient3.ogg
-Downloading: https://resources.download.minecraft.net/66/66af1974a94e5ec0f5960f267779c86465f8a606 Asset: minecraft/sounds/block/vault/break1.ogg
-Downloading: https://resources.download.minecraft.net/3c/3cb7a8b6fbfebb79dc8b425e1b758dcf3fb50148 Asset: minecraft/sounds/block/vault/break2.ogg
-Downloading: https://resources.download.minecraft.net/2e/2e1f3e84b3c1aea6b259d3659a64645146f8c10f Asset: minecraft/sounds/block/vault/break3.ogg
-Downloading: https://resources.download.minecraft.net/58/58516e499854a37b0ef09a4a94e57ac2825a5ab7 Asset: minecraft/sounds/block/vault/break4.ogg
-Downloading: https://resources.download.minecraft.net/10/106d17d4b57d6f1543b71d673ffbb3132e7a3a07 Asset: minecraft/sounds/block/vault/deactivate.ogg
-Downloading: https://resources.download.minecraft.net/ab/abcaa44f03db6e3f2cb0ef8935a27bdb13471a87 Asset: minecraft/sounds/block/vault/eject1.ogg
-Downloading: https://resources.download.minecraft.net/43/43a55ffacf92ad9d8f3bb448a73f5fea461bb11f Asset: minecraft/sounds/block/vault/eject2.ogg
-Downloading: https://resources.download.minecraft.net/80/809db3c4e57174cd5b8334db0e82456b63af9ab5 Asset: minecraft/sounds/block/vault/eject3.ogg
-Downloading: https://resources.download.minecraft.net/a5/a55a2dc3ee551abecdebb245b568f0574342607d Asset: minecraft/sounds/block/vault/insert.ogg
-Downloading: https://resources.download.minecraft.net/54/54cb246bb63ad741d06c4cacb75d1b9f6a5bc2f1 Asset: minecraft/sounds/block/vault/insert_fail.ogg
-Downloading: https://resources.download.minecraft.net/e9/e96aa40aca3dd7abad81cb42b033bdee63a1a9bc Asset: minecraft/sounds/block/vault/open_shutter.ogg
-Downloading: https://resources.download.minecraft.net/0c/0cf427b702d3fff68d667b9709059d56098eb76d Asset: minecraft/sounds/block/vault/place1.ogg
-Downloading: https://resources.download.minecraft.net/b1/b142dae899b099aac120a8f00cc3edeeeae08134 Asset: minecraft/sounds/block/vault/place2.ogg
-Downloading: https://resources.download.minecraft.net/46/465d7f1092969f8b647065ab9771c88c2cd7182d Asset: minecraft/sounds/block/vault/place3.ogg
-Downloading: https://resources.download.minecraft.net/69/69ed076bcc1fb564f9999b99da767ef3a4f1a9db Asset: minecraft/sounds/block/vault/place4.ogg
-Downloading: https://resources.download.minecraft.net/40/40b16b3beab7a29ce014d0d82d1747987d6847e4 Asset: minecraft/sounds/block/vault/reject_rewarded_player.ogg
-Downloading: https://resources.download.minecraft.net/19/1913d4963d024157b5f853ff734ef22d1549e0e4 Asset: minecraft/sounds/block/vault/step1.ogg
-Downloading: https://resources.download.minecraft.net/c2/c269c86d2849d861855ca07f6e1f109e80c08fcd Asset: minecraft/sounds/block/vault/step2.ogg
-Downloading: https://resources.download.minecraft.net/0f/0f1ff3699ff0b1b33d0ea5c85c17741c1c45f3fc Asset: minecraft/sounds/block/vault/step3.ogg
-Downloading: https://resources.download.minecraft.net/ea/ea86e0395315d7d1bd6d9df2e201e828f5bfa0e8 Asset: minecraft/sounds/block/vault/step4.ogg
-Downloading: https://resources.download.minecraft.net/9e/9e85f297a50bc223ad0d4f95c1db45c4a3076204 Asset: minecraft/sounds/block/vault/step5.ogg
-Downloading: https://resources.download.minecraft.net/e1/e1fcdcd61abe96c830940af85d750f46e505982c Asset: minecraft/sounds/block/vault/step6.ogg
-Downloading: https://resources.download.minecraft.net/bc/bc3a42dc72bd716ad78473db282ddc3af3bf23f7 Asset: minecraft/sounds/block/vault/step7.ogg
-Downloading: https://resources.download.minecraft.net/8a/8a2634d860e9f3bf9e80e98acccf985c8d801c06 Asset: minecraft/sounds/block/vault/step8.ogg
-Downloading: https://resources.download.minecraft.net/b6/b64e99d3d09d12c97242f1d6336a4aea4c3233ec Asset: minecraft/sounds/entity/wind_charge/wind_burst1.ogg
-Downloading: https://resources.download.minecraft.net/c0/c07f8dcd5ec017c90a863a48a52ca2e7b3f0544e Asset: minecraft/sounds/entity/wind_charge/wind_burst2.ogg
-Downloading: https://resources.download.minecraft.net/eb/eb0abf982987a1b0f79a06fb45afbe880e275d17 Asset: minecraft/sounds/entity/wind_charge/wind_burst3.ogg
-Downloading: https://resources.download.minecraft.net/45/4520bc7348647bf6d87da98ed3c94e10cb44bc57 Asset: minecraft/sounds/event/mob_effects/bad_omen.ogg
-Downloading: https://resources.download.minecraft.net/ec/ece87e0e7e8f9237c90d7ed06365d63bf1395ebb Asset: minecraft/sounds/event/mob_effects/raid_omen.ogg
-Downloading: https://resources.download.minecraft.net/d3/d3171448351e2d7cd8e6d0e391ad30cbedf1d51e Asset: minecraft/sounds/event/mob_effects/trial_omen.ogg
-Downloading: https://resources.download.minecraft.net/74/74d8eba4e23664a6b6d710e55950567040bbc0c9 Asset: minecraft/sounds/item/armor/break_wolf.ogg
-Downloading: https://resources.download.minecraft.net/0e/0ed6b38ec4330481ce313aa56e26802ee16189d1 Asset: minecraft/sounds/item/armor/crack_wolf1.ogg
-Downloading: https://resources.download.minecraft.net/5b/5baca02dca7ecee14f6f162cdddb0111d63d7482 Asset: minecraft/sounds/item/armor/crack_wolf2.ogg
-Downloading: https://resources.download.minecraft.net/7f/7f0e196daaf94450ecf7cf36efe21f8e02828e5b Asset: minecraft/sounds/item/armor/crack_wolf3.ogg
-Downloading: https://resources.download.minecraft.net/6b/6bf739fe311ec337600bed2ebfd3fac7dabaf4d3 Asset: minecraft/sounds/item/armor/crack_wolf4.ogg
-Downloading: https://resources.download.minecraft.net/c0/c07896007865ff025a1261a4fa519a60c4d7ae47 Asset: minecraft/sounds/item/armor/damage_wolf1.ogg
-Downloading: https://resources.download.minecraft.net/b4/b40a94336928d7c2ae611c36f275afc868b8cf00 Asset: minecraft/sounds/item/armor/damage_wolf2.ogg
-Downloading: https://resources.download.minecraft.net/41/41b2955116651970a92f6f7aa45ca7d7ecd69ed5 Asset: minecraft/sounds/item/armor/damage_wolf3.ogg
-Downloading: https://resources.download.minecraft.net/9b/9b3571e3ee987c0aca83572bbd2a9f4ef42c86b3 Asset: minecraft/sounds/item/armor/damage_wolf4.ogg
-Downloading: https://resources.download.minecraft.net/ba/ba4916e608ac3a1edecf471b2a94585535c4e5ca Asset: minecraft/sounds/item/armor/equip_wolf1.ogg
-Downloading: https://resources.download.minecraft.net/aa/aaa44c84e33fbf7f1f12cf365fe29963f92fc849 Asset: minecraft/sounds/item/armor/equip_wolf2.ogg
-Downloading: https://resources.download.minecraft.net/f5/f509239925846e79b4892d79bfb96c2f3c1e1e0e Asset: minecraft/sounds/item/armor/repair_wolf1.ogg
-Downloading: https://resources.download.minecraft.net/95/95b1be1afda74e2f278d0fa29489a4b7361c36b8 Asset: minecraft/sounds/item/armor/repair_wolf2.ogg
-Downloading: https://resources.download.minecraft.net/5d/5d9a0fe67d76e23dbb251c068d306ffd33edcc6d Asset: minecraft/sounds/item/armor/repair_wolf3.ogg
-Downloading: https://resources.download.minecraft.net/ab/abc827da22f5a9288fd562ea8b9b60593aa14640 Asset: minecraft/sounds/item/armor/repair_wolf4.ogg
-Downloading: https://resources.download.minecraft.net/e3/e3f04a632629e09c2d016ec81cbb5e611946a008 Asset: minecraft/sounds/item/armor/unequip_wolf1.ogg
-Downloading: https://resources.download.minecraft.net/e2/e24a2cac0ddc2f27cd6e74181ad0719b2cda33c6 Asset: minecraft/sounds/item/armor/unequip_wolf2.ogg
-Downloading: https://resources.download.minecraft.net/28/285f453d2bf3c9f637ed0d3aa783889fc033787d Asset: minecraft/sounds/item/bundle/insert_fail.ogg
-Downloading: https://resources.download.minecraft.net/dd/dd201cdf56f5e3360380c2cdc3a21cc5c12ecfa6 Asset: minecraft/sounds/item/mace/smash_air1.ogg
-Downloading: https://resources.download.minecraft.net/a8/a898059fce9481ea07fffd8dcab80b6087d684e7 Asset: minecraft/sounds/item/mace/smash_air2.ogg
-Downloading: https://resources.download.minecraft.net/54/54dcde12a230e188c268653a1def01aa2f63a124 Asset: minecraft/sounds/item/mace/smash_air3.ogg
-Downloading: https://resources.download.minecraft.net/88/88efd3b53d45f8cc6ae2ab39a414aa20d9760c46 Asset: minecraft/sounds/item/mace/smash_ground1.ogg
-Downloading: https://resources.download.minecraft.net/df/df4382620752d04c27e3f33be08bacc2fc89078c Asset: minecraft/sounds/item/mace/smash_ground2.ogg
-Downloading: https://resources.download.minecraft.net/d7/d761b39e2ae68753d68a3611c3d8efbf213e669a Asset: minecraft/sounds/item/mace/smash_ground3.ogg
-Downloading: https://resources.download.minecraft.net/42/42409a52c41c8dee98159236a4fd98813f29bef6 Asset: minecraft/sounds/item/mace/smash_ground4.ogg
-Downloading: https://resources.download.minecraft.net/6f/6ffcfff22efc6ba726ed80d7891b1c6e707bed60 Asset: minecraft/sounds/item/mace/smash_ground_heavy.ogg
-Downloading: https://resources.download.minecraft.net/38/381d6b0a0063bccb811f6df1d58e50e600c0b2f4 Asset: minecraft/sounds/item/ominous_bottle/dispose.ogg
-Downloading: https://resources.download.minecraft.net/cb/cb6f7ae2f8d10f2df7724d6296d6fcce03d7f63e Asset: minecraft/sounds/mob/armadillo/ambient1.ogg
-Downloading: https://resources.download.minecraft.net/fc/fc89adb60b61d2fe8b9bfd66a980a4e07494e761 Asset: minecraft/sounds/mob/armadillo/ambient2.ogg
-Downloading: https://resources.download.minecraft.net/74/744cbff6c19c4ed15fbde1d0b1c7c0667857598b Asset: minecraft/sounds/mob/armadillo/ambient3.ogg
-Downloading: https://resources.download.minecraft.net/42/42be5a4ca8d53cd5042ba64adc4f7ea23427d717 Asset: minecraft/sounds/mob/armadillo/ambient4.ogg
-Downloading: https://resources.download.minecraft.net/46/466b85bdf9e58b35b744ec87d7732c57d07f4063 Asset: minecraft/sounds/mob/armadillo/ambient5.ogg
-Downloading: https://resources.download.minecraft.net/49/49ed3b28fccda37cbebd2d34de7353acb6acd2c6 Asset: minecraft/sounds/mob/armadillo/ambient6.ogg
-Downloading: https://resources.download.minecraft.net/ce/ce94135832b9f1b004747fdce6239861e3188a54 Asset: minecraft/sounds/mob/armadillo/ambient7.ogg
-Downloading: https://resources.download.minecraft.net/d1/d14c1527c122d12d5640ede441f64c71c6dad958 Asset: minecraft/sounds/mob/armadillo/ambient8.ogg
-Downloading: https://resources.download.minecraft.net/92/9269e0fab5e813e809ad962e4ece7a302973231f Asset: minecraft/sounds/mob/armadillo/brush_armadillo1.ogg
-Downloading: https://resources.download.minecraft.net/4b/4b02fc032a7414ef45a1a1e545b9469791b25224 Asset: minecraft/sounds/mob/armadillo/brush_armadillo2.ogg
-Downloading: https://resources.download.minecraft.net/cf/cf49a8ee96f115fa39086722a7220b15c120b6b7 Asset: minecraft/sounds/mob/armadillo/death1.ogg
-Downloading: https://resources.download.minecraft.net/a8/a872475442b2944eda22d845e71e30d43dff1e0b Asset: minecraft/sounds/mob/armadillo/death2.ogg
-Downloading: https://resources.download.minecraft.net/41/4178494fd182b540929b0c1f52233d6089fa5ca2 Asset: minecraft/sounds/mob/armadillo/death3.ogg
-Downloading: https://resources.download.minecraft.net/20/20a8f42ea5b8b2bc2f7b3f6b2d57cfc8fbf8bfbd Asset: minecraft/sounds/mob/armadillo/death4.ogg
-Downloading: https://resources.download.minecraft.net/71/71743ea879b9903f74680ba036810922619997e6 Asset: minecraft/sounds/mob/armadillo/eat1.ogg
-Downloading: https://resources.download.minecraft.net/6d/6dc446eabf8a8b4fe73b96bf6bd324fa457d30cb Asset: minecraft/sounds/mob/armadillo/eat2.ogg
-Downloading: https://resources.download.minecraft.net/c3/c32215798440d20d3a1abe7184982bc7de7b8018 Asset: minecraft/sounds/mob/armadillo/eat3.ogg
-Downloading: https://resources.download.minecraft.net/bf/bff154e44b79ae76fde450ec3dd000ee29660157 Asset: minecraft/sounds/mob/armadillo/hurt1.ogg
-Downloading: https://resources.download.minecraft.net/f1/f1e592cd54b7c88dcd8d62d0612199be25c2b64d Asset: minecraft/sounds/mob/armadillo/hurt2.ogg
-Downloading: https://resources.download.minecraft.net/fd/fd9548fef82e6ec8e254e46becf76d5d40419757 Asset: minecraft/sounds/mob/armadillo/hurt3.ogg
-Downloading: https://resources.download.minecraft.net/c9/c9a965f9f2a6db5f68cd46015985e7a2190a74be Asset: minecraft/sounds/mob/armadillo/hurt4.ogg
-Downloading: https://resources.download.minecraft.net/7a/7a09d71409eff220fc9d48053e7faa2d315f9de8 Asset: minecraft/sounds/mob/armadillo/hurt5.ogg
-Downloading: https://resources.download.minecraft.net/4f/4feea37a3f783e2c9ea844ef2b4ee9f3cc20698d Asset: minecraft/sounds/mob/armadillo/hurt_reduced1.ogg
-Downloading: https://resources.download.minecraft.net/f2/f29746a1c78de0e7e75adeac1d605c4f0e4da73e Asset: minecraft/sounds/mob/armadillo/hurt_reduced2.ogg
-Downloading: https://resources.download.minecraft.net/e8/e8b4ff9971ce75716227605ae62da465a632c5d5 Asset: minecraft/sounds/mob/armadillo/hurt_reduced3.ogg
-Downloading: https://resources.download.minecraft.net/a4/a4a4553b144aea8b4fa63778cf900b909b1c4d30 Asset: minecraft/sounds/mob/armadillo/hurt_reduced4.ogg
-Downloading: https://resources.download.minecraft.net/eb/eb187a91ae4ea9efb383b9ee15bc74ce4d5631c1 Asset: minecraft/sounds/mob/armadillo/land1.ogg
-Downloading: https://resources.download.minecraft.net/b2/b238154dc455d7b96a654d2d88df7a5d9f1f1c5a Asset: minecraft/sounds/mob/armadillo/land2.ogg
-Downloading: https://resources.download.minecraft.net/f3/f3e6ddd0a1388cc27a92668bd7501c1b880fcd43 Asset: minecraft/sounds/mob/armadillo/land3.ogg
-Downloading: https://resources.download.minecraft.net/16/167e7bc7da370415d4a3f40aa6614fca472b71a0 Asset: minecraft/sounds/mob/armadillo/land4.ogg
-Downloading: https://resources.download.minecraft.net/be/becaa3fe9df62d21f2dcbd107d1271fd8aab81e8 Asset: minecraft/sounds/mob/armadillo/peek.ogg
-Downloading: https://resources.download.minecraft.net/56/56b9f15306b40fe0e6b6eff83a41d38184b27592 Asset: minecraft/sounds/mob/armadillo/roll1.ogg
-Downloading: https://resources.download.minecraft.net/bc/bc891bcf154019454a9833a328f9a5d3c9f9ac78 Asset: minecraft/sounds/mob/armadillo/roll2.ogg
-Downloading: https://resources.download.minecraft.net/79/79081e734887536ff42c30187ee83aa8d7aad176 Asset: minecraft/sounds/mob/armadillo/roll3.ogg
-Downloading: https://resources.download.minecraft.net/15/1500e817ce7e100b5bfd06553d50bf740f8ee86d Asset: minecraft/sounds/mob/armadillo/roll4.ogg
-Downloading: https://resources.download.minecraft.net/ab/ab106a4d5ebb591dd998cd021bd53a446800ff34 Asset: minecraft/sounds/mob/armadillo/scute_drop1.ogg
-Downloading: https://resources.download.minecraft.net/64/64c7611a394b9adf8a532156cdc168fba9ef28eb Asset: minecraft/sounds/mob/armadillo/scute_drop2.ogg
-Downloading: https://resources.download.minecraft.net/1c/1c6cfea5aa5815286558703e21c03abfb92b33ca Asset: minecraft/sounds/mob/armadillo/step1.ogg
-Downloading: https://resources.download.minecraft.net/94/9462062c536bb648c41c31872ff147bd6fce2eda Asset: minecraft/sounds/mob/armadillo/step2.ogg
-Downloading: https://resources.download.minecraft.net/a1/a1aca3fc5ecde937748c1d701b4f726b03ed4f27 Asset: minecraft/sounds/mob/armadillo/step3.ogg
-Downloading: https://resources.download.minecraft.net/49/49fad98686f1972b15ce93d10ff3b71a58758408 Asset: minecraft/sounds/mob/armadillo/step4.ogg
-Downloading: https://resources.download.minecraft.net/85/85937b1b39be6a3817a6ebb5e8f6505be7ddfbd7 Asset: minecraft/sounds/mob/armadillo/step5.ogg
-Downloading: https://resources.download.minecraft.net/0e/0e985cabe00eef63c117bfba48a7ae6552fe4fe0 Asset: minecraft/sounds/mob/armadillo/unroll_finish1.ogg
-Downloading: https://resources.download.minecraft.net/5b/5bb6ff790e44bd2cedb0929fd040f0b847fbcd14 Asset: minecraft/sounds/mob/armadillo/unroll_finish2.ogg
-Downloading: https://resources.download.minecraft.net/36/36196e23d75142d74e9907883f7dd3e1002b0166 Asset: minecraft/sounds/mob/armadillo/unroll_start.ogg
-Downloading: https://resources.download.minecraft.net/5f/5f8556f723c34a345892f9b668af94d69d68d68d Asset: minecraft/sounds/mob/bogged/ambient1.ogg
-Downloading: https://resources.download.minecraft.net/48/4832e2d96223ab0023d26f9a8b62bd178da7d034 Asset: minecraft/sounds/mob/bogged/ambient2.ogg
-Downloading: https://resources.download.minecraft.net/1b/1bdacbed0f0895030d7749bf37f3444af86acb16 Asset: minecraft/sounds/mob/bogged/ambient3.ogg
-Downloading: https://resources.download.minecraft.net/5f/5fa87b6c86c70f2b59d9cefbaf72d22b5ecc0e4f Asset: minecraft/sounds/mob/bogged/ambient4.ogg
-Downloading: https://resources.download.minecraft.net/8b/8bd17ca560e4355c5f8988ac995aa105952e3b19 Asset: minecraft/sounds/mob/bogged/death.ogg
-Downloading: https://resources.download.minecraft.net/de/de88522690b70fe1765c2a043c771ea220b01b55 Asset: minecraft/sounds/mob/bogged/hurt1.ogg
-Downloading: https://resources.download.minecraft.net/eb/eb94d6b07d96b35a034539bacbef956870fdeb71 Asset: minecraft/sounds/mob/bogged/hurt2.ogg
-Downloading: https://resources.download.minecraft.net/8d/8d82ba7b46b05bdfae5d4d4e840d3782dc2c1398 Asset: minecraft/sounds/mob/bogged/hurt3.ogg
-Downloading: https://resources.download.minecraft.net/07/07f8691ee57050c62d6d1230c13f74f9fcad5dab Asset: minecraft/sounds/mob/bogged/hurt4.ogg
-Downloading: https://resources.download.minecraft.net/ed/ede11b981f756a2c8a02f3e69618e06fc3ce3aa9 Asset: minecraft/sounds/mob/bogged/step1.ogg
-Downloading: https://resources.download.minecraft.net/9f/9fa505d6126fe5b5faf7084bce5452afaa02668c Asset: minecraft/sounds/mob/bogged/step2.ogg
-Downloading: https://resources.download.minecraft.net/4e/4e7472536275a5afcfbc2496eb35929843b0c655 Asset: minecraft/sounds/mob/bogged/step3.ogg
-Downloading: https://resources.download.minecraft.net/e5/e5dbbe6fb3a1f780f2685b3490d24da868262abb Asset: minecraft/sounds/mob/bogged/step4.ogg
-Downloading: https://resources.download.minecraft.net/90/90680b63399e258ac5607825debc615acf92151a Asset: minecraft/sounds/mob/breeze/charge1.ogg
-Downloading: https://resources.download.minecraft.net/96/964d9e3ac555a4e5b204e8e1b25f35588709d7ff Asset: minecraft/sounds/mob/breeze/charge2.ogg
-Downloading: https://resources.download.minecraft.net/38/38f948ad20d82b0b9126ab77fee485bb9e4dc6ef Asset: minecraft/sounds/mob/breeze/charge3.ogg
-Downloading: https://resources.download.minecraft.net/c2/c202f0860b6138c0ac79054b6f36fd1addc9aa56 Asset: minecraft/sounds/mob/breeze/death1.ogg
-Downloading: https://resources.download.minecraft.net/43/43ab5177a7851f3306d991b907eb7c49b7a6a7ff Asset: minecraft/sounds/mob/breeze/death2.ogg
-Downloading: https://resources.download.minecraft.net/80/808408bef5a97f889e851ef7f51db5206beb691d Asset: minecraft/sounds/mob/breeze/deflect1.ogg
-Downloading: https://resources.download.minecraft.net/44/444f7b9560d44cfd5901d5a0e803c382138342ff Asset: minecraft/sounds/mob/breeze/deflect2.ogg
-Downloading: https://resources.download.minecraft.net/4b/4b2d403365d008c2de04205429c57134a6238948 Asset: minecraft/sounds/mob/breeze/deflect3.ogg
-Downloading: https://resources.download.minecraft.net/ba/ba8211d400e834c2f7663af2214a68e44ee82942 Asset: minecraft/sounds/mob/breeze/hurt1.ogg
-Downloading: https://resources.download.minecraft.net/fc/fc603184d75b017650f1d4b4d02254a81aa801df Asset: minecraft/sounds/mob/breeze/hurt2.ogg
-Downloading: https://resources.download.minecraft.net/51/51fff105f89bb1a21a59c621911d80ae231214d9 Asset: minecraft/sounds/mob/breeze/hurt3.ogg
-Downloading: https://resources.download.minecraft.net/cb/cbed5f15a05b3a662adf264509699df2891e5154 Asset: minecraft/sounds/mob/breeze/idle1.ogg
-Downloading: https://resources.download.minecraft.net/0d/0d889b4e0e441244f74ae65a66b340d19055cf24 Asset: minecraft/sounds/mob/breeze/idle2.ogg
-Downloading: https://resources.download.minecraft.net/8b/8bff765dad4eff48f8c6aa6e994da65910bf0ad1 Asset: minecraft/sounds/mob/breeze/idle3.ogg
-Downloading: https://resources.download.minecraft.net/b4/b47c126e90c1e3f77f7adb2da485825b3b5a8cbc Asset: minecraft/sounds/mob/breeze/idle4.ogg
-Downloading: https://resources.download.minecraft.net/fb/fb444b48bc2d5cf6960de7d5d4e6a0be91dc9321 Asset: minecraft/sounds/mob/breeze/idle_air1.ogg
-Downloading: https://resources.download.minecraft.net/ed/edbb18c9026dd2d40b9446400463c3d5b662c0a0 Asset: minecraft/sounds/mob/breeze/idle_air2.ogg
-Downloading: https://resources.download.minecraft.net/28/286f6b96458622474fc03f5152603e811b9d3887 Asset: minecraft/sounds/mob/breeze/idle_air3.ogg
-Downloading: https://resources.download.minecraft.net/ae/ae4ffd746ff417111f7b7a2ba6eba2aa01645a6b Asset: minecraft/sounds/mob/breeze/idle_air4.ogg
-Downloading: https://resources.download.minecraft.net/13/13dd3f6cd67c6789ded0108006317cbda08a2aff Asset: minecraft/sounds/mob/breeze/inhale1.ogg
-Downloading: https://resources.download.minecraft.net/76/766d75e814c9e6d8ff3a82cded2ef571aae504c4 Asset: minecraft/sounds/mob/breeze/inhale2.ogg
-Downloading: https://resources.download.minecraft.net/38/38ae67559dd3d1b390f3bd9bbed3a258d9b2038a Asset: minecraft/sounds/mob/breeze/jump1.ogg
-Downloading: https://resources.download.minecraft.net/34/3497fd1c0597325bb3226c53fd9f076609f89c7e Asset: minecraft/sounds/mob/breeze/jump2.ogg
-Downloading: https://resources.download.minecraft.net/b3/b34c0a6ad6d02d54d3a073d6faa019d0be9265bf Asset: minecraft/sounds/mob/breeze/land1.ogg
-Downloading: https://resources.download.minecraft.net/7c/7cea8fa333a936a8ef9b6f8c1d318d8159a36409 Asset: minecraft/sounds/mob/breeze/land2.ogg
-Downloading: https://resources.download.minecraft.net/74/7455c3943373804f3cf466981240ef1ef4233184 Asset: minecraft/sounds/mob/breeze/shoot.ogg
-Downloading: https://resources.download.minecraft.net/a9/a907555ea42c3ca4b7aba304b18041b48ac37980 Asset: minecraft/sounds/mob/breeze/slide1.ogg
-Downloading: https://resources.download.minecraft.net/b9/b962dd713e13158e086b741329c88ef1d2aa506b Asset: minecraft/sounds/mob/breeze/slide2.ogg
-Downloading: https://resources.download.minecraft.net/01/01b562613c6fb2500fd94ac821912ce82c4e7d83 Asset: minecraft/sounds/mob/breeze/slide3.ogg
-Downloading: https://resources.download.minecraft.net/f7/f72a443da00bf94c598ea1e7db346a7db9384afc Asset: minecraft/sounds/mob/breeze/slide4.ogg
-Downloading: https://resources.download.minecraft.net/b4/b4ee736f5c053aad10a62731c82c5f19dc751aa2 Asset: minecraft/sounds/mob/breeze/whirl.ogg
-Downloading: https://resources.download.minecraft.net/ed/ed1eb91a8f52c44fab47bfae8502a0758e0fcaff Asset: minecraft/sounds/mob/breeze/wind_burst1.ogg
-Downloading: https://resources.download.minecraft.net/bf/bfb5ae6dc11ef5c6c863c822da59e10497195c47 Asset: minecraft/sounds/mob/breeze/wind_burst2.ogg
-Downloading: https://resources.download.minecraft.net/b9/b980f449c9fde0ca1422e44e3d1605185f0c595f Asset: minecraft/sounds/mob/breeze/wind_burst3.ogg
-Downloading: https://resources.download.minecraft.net/86/86c13073d03ea8891b5009e17b9fdc04844d2768 Asset: minecraft/sounds/music/game/deeper.ogg
-Downloading: https://resources.download.minecraft.net/1f/1f1449907421a81fee5f78d6c6861fa7a2d80ba4 Asset: minecraft/sounds/music/game/eld_unknown.ogg
-Downloading: https://resources.download.minecraft.net/68/68db83394860feaabdafb2b01a6acb029e7705d9 Asset: minecraft/sounds/music/game/endless.ogg
-Downloading: https://resources.download.minecraft.net/c4/c497c8c1dada852bafaa9ac17c5c30f37d0befed Asset: minecraft/sounds/music/game/featherfall.ogg
-Downloading: https://resources.download.minecraft.net/16/16f4e71923c1ebfbe33fd27c858bc068c9ea370e Asset: minecraft/sounds/music/game/komorebi.ogg
-Downloading: https://resources.download.minecraft.net/e1/e1b9ec95afb8fbb100bc4bf724316e9450b0bfa2 Asset: minecraft/sounds/music/game/pokopoko.ogg
-Downloading: https://resources.download.minecraft.net/95/953ae3a3073e78def006e3cb73c6687ae4cc1280 Asset: minecraft/sounds/music/game/puzzlebox.ogg
-Downloading: https://resources.download.minecraft.net/27/27132102cc62dbd42716cd0bf5906420265bb32d Asset: minecraft/sounds/music/game/watcher.ogg
-Downloading: https://resources.download.minecraft.net/69/695ebecf6c36de73a4d57a080811ef63802011cf Asset: minecraft/sounds/music/game/yakusoku.ogg
-Downloading: https://resources.download.minecraft.net/d1/d1c3c66face8215ff2f9635f4d7c168fdea34d88 Asset: minecraft/sounds/records/creator.ogg
-Downloading: https://resources.download.minecraft.net/e1/e15def690303d9631fde9f60ea6d38de8e62b5db Asset: minecraft/sounds/records/creator_music_box.ogg
-Downloading: https://resources.download.minecraft.net/a0/a069bdaa24c0d9b9c0a2907113c5716ae5775846 Asset: minecraft/sounds/records/precipice.ogg
-Downloading: https://resources.download.minecraft.net/c8/c83734c663e77e44a34e5779b3fb0bb0e50aad21 Asset: minecraft/sounds/tile/piston/in.ogg
-Downloading: https://resources.download.minecraft.net/58/58fc87d6d9ea1b8967ad1ec6976864c802fe1519 Asset: minecraft/sounds/tile/piston/out.ogg
-Downloading: https://resources.download.minecraft.net/dc/dca189017c6b77dc6e55ebfb0baca2b645b6e4cd Asset: minecraft/textures/gui/title/background/panorama_0.png
-Downloading: https://resources.download.minecraft.net/97/97d080a6827e54904eb7bbe0f04df20eb9070d1a Asset: minecraft/textures/gui/title/background/panorama_1.png
-Downloading: https://resources.download.minecraft.net/d7/d79ff13dd8ff2f7b8d497a7516db1bb2d86d2ab8 Asset: minecraft/textures/gui/title/background/panorama_2.png
-Downloading: https://resources.download.minecraft.net/b6/b6265425a2c765dd5fc286d5f355a812cad938e2 Asset: minecraft/textures/gui/title/background/panorama_3.png
-Downloading: https://resources.download.minecraft.net/ce/cec25b0246d77e6f1dcef0d051ccb328ba39227a Asset: minecraft/textures/gui/title/background/panorama_4.png
-Downloading: https://resources.download.minecraft.net/74/74703134a27a57d2de96860bca55d447759c0edc Asset: minecraft/textures/gui/title/background/panorama_5.png
-Downloading: https://resources.download.minecraft.net/a1/a1260ad0107b49e9ea070a1ed87934b50d6caefd Asset: realms/lang/en_us.json
-
-> Task :extractNatives
+> Task :extractSrg UP-TO-DATE
+> Task :createSrgToMcp UP-TO-DATE
+> Task :downloadMCMeta UP-TO-DATE
+> Task :downloadAssets UP-TO-DATE
+> Task :extractNatives UP-TO-DATE
 > Task :makeSrcDirs
 > Task :prepareRuns
 > Task :prepareRunClient
@@ -379,93 +34,229 @@ WARN StatusConsoleListener The use of package scanning to locate plugins is depr
 WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
 WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
 WARN StatusConsoleListener Advanced terminal features are not available in this environment
-[01:12:16] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_client, --version, MOD_DEV, --assetIndex, 17, --assetsDir, C:\Users\LXY29\.gradle\caches\forge_gradle\assets, --gameDir, .]
-[01:12:16] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as BellSoft OpenJDK 64-Bit Server VM 21.0.3+12-LTS
-[01:12:16] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.2.4 starting: java version 21.0.3 by BellSoft; OS Windows 11 arch amd64 version 10.0
-[01:12:16] [main/DEBUG] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Found launch services [forge_userdev_client,forge_dev_data,minecraft,forge_userdev_server_gametest,forge_dev_client,forge_userdev_data,forge_dev_server_gametest,testharness,forge_userdev_server,forge_client,forge_dev_server,forge_server]
-[01:12:16] [main/DEBUG] [cp.mo.mo.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
-[01:12:16] [main/DEBUG] [cp.mo.mo.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,eventbus,slf4jfixer,object_holder_definalize,runtime_enum_extender,capability_token_subclass,accesstransformer,runtimedistcleaner]
-[01:12:16] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
-[01:12:16] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path GAMEDIR is D:\CodeLibrary\VL-1.21.1-forge\run
-[01:12:16] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path MODSDIR is D:\CodeLibrary\VL-1.21.1-forge\run\mods
-[01:12:16] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path CONFIGDIR is D:\CodeLibrary\VL-1.21.1-forge\run\config
-[01:12:16] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path FMLCONFIG is D:\CodeLibrary\VL-1.21.1-forge\run\config\fml.toml
-[01:12:16] [main/WARN] [ne.mi.fm.lo.FMLConfig/CORE]: Configuration file D:\CodeLibrary\VL-1.21.1-forge\run\config\fml.toml is not correct. Correcting
-[01:12:16] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSkipGLVersions] was corrected from null to []
-[01:12:16] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowLogHelpMessage] was corrected from null to true
-[01:12:16] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSquir] was corrected from null to false
-[01:12:16] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowShowCPU] was corrected from null to false
-[01:12:16] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[01:12:17] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[01:12:17] [main/INFO] [EARLYDISPLAY/]: If this message is the only thing at the bottom of your log before a crash, you probably have a driver issue.
-
-Possible solutions:
-A) Make sure Minecraft is set to prefer high performance graphics in the OS and/or driver control panel
-B) Check for driver updates on the graphics brand's website
-C) Try reinstalling your graphics drivers
-D) If still not working after trying all of the above, ask for further help on the Forge forums or Discord
-
-You can safely ignore this message if the game starts up successfully.
-[01:12:17] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Found transformer service: fml: /
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Found transformer service: mixin: /
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Detected version data : VersionInfo[forgeVersion=52.1.21, mcVersion=1.21.1, mcpVersion=20240808.132146, forgeGroup=net.minecraftforge]
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.LauncherVersion/CORE]: Found FMLLauncher version 52.1.21
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: FML 52.1.21 loading
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Requesting CoreMods to not apply the fix for ASMAPI.findFirstInstructionBefore by default
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found ModLauncher version: 10.2.4
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found AccessTransformer version: 8.2.2
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found EventBus version: 6.2.33
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found RuntimeDistCleaner version: 52.1.21
-[01:12:17] [main/DEBUG] [ne.mi.co.CoreModEngine/]: CoreMods will preserve legacy behavior of ASMAPI.findFirstInstructionBefore for backwards-compatibility
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: FML found CoreMod version : 5.2.6
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found ForgeSPI version: 7.1.5
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
-[01:12:17] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in SecureModuleClassLoader[SECURE-BOOTSTRAP]@26728049
-[01:12:17] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=CLIENT
-[01:12:17] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
-[01:12:17] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[01:12:17] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
-[01:12:17] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[01:12:17] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
-[01:12:17] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Setting up basic FML game directories
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path GAMEDIR is D:\CodeLibrary\VL-1.21.1-forge\run
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path MODSDIR is D:\CodeLibrary\VL-1.21.1-forge\run\mods
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path CONFIGDIR is D:\CodeLibrary\VL-1.21.1-forge\run\config
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path FMLCONFIG is D:\CodeLibrary\VL-1.21.1-forge\run\config\fml.toml
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Loading configuration
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Preparing ModFile
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Preparing launch handler
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Using forge_userdev_client as launch service
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
-[01:12:17] [main/DEBUG] [cp.mo.mo.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
-[01:12:17] [main/DEBUG] [cp.mo.mo.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=net.minecraftforge.fml.loading.MCPNamingService@6a84bc2a}
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
-[01:12:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Initiating mod scan
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.mo.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(minecraft:null),(classpath:null),(forge_dev_locator:null),(forge_userdev_locator:null)
-[01:12:17] [main/DEBUG] [ne.mi.fm.lo.mo.ModDiscoverer/CORE]: Found Dependency Locators : (JarInJar:null)
-[01:12:18] [EarlyDisplay/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2 GL version 4.6.0 NVIDIA 596.49, NVIDIA Corporation
-[01:12:18] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {minecraft} mods - versions {1.21.1}
-[01:12:18] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate D:\CodeLibrary\VL-1.21.1-forge\build\resources\main
-[01:12:18] [main/ERROR] [ne.mi.fm.lo.mo.ModDiscoverer/SCAN]: Locator net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@3fdecce found an invalid mod file net.minecraftforge.fml.loading.moddiscovery.ModFileInfo@344426bf
-net.minecraftforge.fml.loading.moddiscovery.InvalidModFileException: Missing required field mandatory in dependency (main)
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.ModInfo$ModVersion.of(ModInfo.java:221) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.ModInfo.setupDependencies(ModInfo.java:133) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.ModInfo.of(ModInfo.java:121) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.ModFileInfo.lambda$new$2(ModFileInfo.java:111) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
+[01:15:13] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_client, --version, MOD_DEV, --assetIndex, 17, --assetsDir, C:\Users\LXY29\.gradle\caches\forge_gradle\assets, --gameDir, .]
+[01:15:13] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as BellSoft OpenJDK 64-Bit Server VM 21.0.3+12-LTS
+[01:15:13] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.2.4 starting: java version 21.0.3 by BellSoft; OS Windows 11 arch amd64 version 10.0
+[01:15:13] [main/DEBUG] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Found launch services [forge_userdev_client,forge_dev_data,minecraft,forge_userdev_server_gametest,forge_dev_client,forge_userdev_data,forge_dev_server_gametest,testharness,forge_userdev_server,forge_client,forge_dev_server,forge_server]
+[01:15:13] [main/DEBUG] [cp.mo.mo.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
+[01:15:13] [main/DEBUG] [cp.mo.mo.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,eventbus,slf4jfixer,object_holder_definalize,runtime_enum_extender,capability_token_subclass,accesstransformer,runtimedistcleaner]
+[01:15:13] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path GAMEDIR is D:\CodeLibrary\VL-1.21.1-forge\run
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path MODSDIR is D:\CodeLibrary\VL-1.21.1-forge\run\mods
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path CONFIGDIR is D:\CodeLibrary\VL-1.21.1-forge\run\config
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path FMLCONFIG is D:\CodeLibrary\VL-1.21.1-forge\run\config\fml.toml
+[01:15:13] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[01:15:13] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[01:15:13] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[01:15:13] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Found transformer service: fml: /
+[01:15:13] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Found transformer service: mixin: /
+[01:15:13] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
+[01:15:13] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
+[01:15:13] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
+[01:15:13] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Detected version data : VersionInfo[forgeVersion=52.1.21, mcVersion=1.21.1, mcpVersion=20240808.132146, forgeGroup=net.minecraftforge]
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.LauncherVersion/CORE]: Found FMLLauncher version 52.1.21
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: FML 52.1.21 loading
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Requesting CoreMods to not apply the fix for ASMAPI.findFirstInstructionBefore by default
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found ModLauncher version: 10.2.4
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found AccessTransformer version: 8.2.2
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found EventBus version: 6.2.33
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found RuntimeDistCleaner version: 52.1.21
+[01:15:13] [main/DEBUG] [ne.mi.co.CoreModEngine/]: CoreMods will preserve legacy behavior of ASMAPI.findFirstInstructionBefore for backwards-compatibility
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: FML found CoreMod version : 5.2.6
+[01:15:13] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found ForgeSPI version: 7.1.5
+[01:15:13] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
+[01:15:13] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
+[01:15:13] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
+[01:15:13] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
+[01:15:13] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in SecureModuleClassLoader[SECURE-BOOTSTRAP]@26728049
+[01:15:14] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=CLIENT
+[01:15:14] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
+[01:15:14] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[01:15:14] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[01:15:14] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[01:15:14] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[01:15:14] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[01:15:14] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
+[01:15:14] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
+[01:15:14] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Setting up basic FML game directories
+[01:15:14] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path GAMEDIR is D:\CodeLibrary\VL-1.21.1-forge\run
+[01:15:14] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path MODSDIR is D:\CodeLibrary\VL-1.21.1-forge\run\mods
+[01:15:14] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path CONFIGDIR is D:\CodeLibrary\VL-1.21.1-forge\run\config
+[01:15:14] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path FMLCONFIG is D:\CodeLibrary\VL-1.21.1-forge\run\config\fml.toml
+[01:15:14] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Loading configuration
+[01:15:14] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Preparing ModFile
+[01:15:14] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Preparing launch handler
+[01:15:14] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Using forge_userdev_client as launch service
+[01:15:14] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
+[01:15:14] [main/DEBUG] [cp.mo.mo.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
+[01:15:14] [main/DEBUG] [cp.mo.mo.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=net.minecraftforge.fml.loading.MCPNamingService@4525d1d3}
+[01:15:14] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
+[01:15:14] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
+[01:15:14] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
+[01:15:14] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
+[01:15:14] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Initiating mod scan
+[01:15:14] [main/DEBUG] [ne.mi.fm.lo.mo.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(minecraft:null),(classpath:null),(forge_dev_locator:null),(forge_userdev_locator:null)
+[01:15:14] [main/DEBUG] [ne.mi.fm.lo.mo.ModDiscoverer/CORE]: Found Dependency Locators : (JarInJar:null)
+[01:15:14] [EarlyDisplay/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2 GL version 4.6.0 NVIDIA 596.49, NVIDIA Corporation
+[01:15:15] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {minecraft} mods - versions {1.21.1}
+[01:15:15] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate D:\CodeLibrary\VL-1.21.1-forge\build\resources\main
+[01:15:15] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file main with {videoloading} mods - versions {1.0.0}
+[01:15:15] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /
+[01:15:15] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {52.1.21}
+[01:15:15] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from , it does not contain dependency information.
+[01:15:15] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from main, it does not contain dependency information.
+[01:15:15] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from , it does not contain dependency information.
+[01:15:15] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from javafmllanguage-1.21.1-52.1.21.jar, it does not contain dependency information.
+[01:15:15] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from mclanguage-1.21.1-52.1.21.jar, it does not contain dependency information.
+[01:15:15] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from lowcodelanguage-1.21.1-52.1.21.jar, it does not contain dependency information.
+[01:15:15] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from fmlcore-1.21.1-52.1.21.jar, it does not contain dependency information.
+[01:15:16] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {minecraft} mods - versions {1.21.1}
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate D:\CodeLibrary\VL-1.21.1-forge\build\resources\main
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file main with {videoloading} mods - versions {1.0.0}
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Loading mod file D:\CodeLibrary\VL-1.21.1-forge\build\resources\main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[52,)]]
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {52.1.21}
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Found coremod field_to_method with Javascript path coremods/field_to_method.js
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Found coremod method_redirector with Javascript path coremods/method_redirector.js
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Found coremod /coremods/field_to_method.js
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Found coremod /coremods/method_redirector.js
+[01:15:16] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.LanguageLoadingProvider/CORE]: Found 3 language providers
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.LanguageLoadingProvider/CORE]: Found language provider lowcodefml, version 52
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 1.0
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.LanguageLoadingProvider/CORE]: Found language provider javafml, version 52.1.21
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.ModSorter/]: Configured system mods: [minecraft, forge]
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.ModSorter/]: Found system mod: minecraft
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.ModSorter/]: Found system mod: forge
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.ModSorter/LOADING]: Found 2 mod requirements (2 mandatory, 0 optional)
+[01:15:16] [main/DEBUG] [ne.mi.fm.lo.ModSorter/LOADING]: Found 0 mod requirements missing (0 mandatory, 0 optional)
+[01:15:17] [main/DEBUG] [ne.mi.fm.lo.MCPNamingService/CORE]: Loaded 37504 method mappings from methods.csv
+[01:15:17] [main/DEBUG] [ne.mi.fm.lo.MCPNamingService/CORE]: Loaded 35622 field mappings from fields.csv
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service mixin
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service mixin
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
+[01:15:17] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Loading coremod transformers
+[01:15:17] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: Loading CoreMod from /coremods/field_to_method.js
+[01:15:17] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[01:15:17] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: Loading CoreMod from /coremods/method_redirector.js
+[01:15:17] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@31120021 to Target : CLASS {Lnet/minecraft/world/level/biome/Biome;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@203d1d93 to Target : CLASS {Lnet/minecraft/world/effect/MobEffectInstance;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@2c2a027c to Target : CLASS {Lnet/minecraft/world/level/block/LiquidBlock;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@118dcbbd to Target : CLASS {Lnet/minecraft/world/item/BucketItem;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7d979d34 to Target : CLASS {Lnet/minecraft/world/level/block/FlowerPotBlock;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces$WoodlandMansionPiece;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/server/commands/SummonCommand;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/entity/npc/CatSpawner;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/entity/ai/village/VillageSiege;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/level/levelgen/structure/structures/OceanRuinPieces$OceanRuinPiece;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/level/levelgen/structure/structures/SwampHutPiece;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/level/levelgen/PhantomSpawner;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/entity/npc/Villager;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/entity/monster/Evoker$EvokerSummonSpellGoal;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/level/levelgen/structure/structures/OceanMonumentPieces$OceanMonumentPiece;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/entity/animal/frog/Tadpole;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/level/levelgen/PatrolSpawner;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/entity/monster/ZombieVillager;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/entity/monster/Strider;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/entity/monster/Spider;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/entity/monster/Zombie;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/entity/raid/Raid;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/server/commands/RaidCommand;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/entity/EntityType;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/entity/animal/horse/SkeletonTrapGoal;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@350ec690 to Target : CLASS {Lnet/minecraft/world/level/NaturalSpawner;} {} {V}
+[01:15:17] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
+[01:15:17] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[01:15:17] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[01:15:17] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(mixin.synthetic)
+[01:15:17] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(mixin.synthetic)
+[01:15:17] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(mixin.synthetic)
+[01:15:17] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(mixin.synthetic)
+[01:15:17] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(mixin.synthetic)
+[01:15:17] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(mixin.synthetic)]
+[01:15:17] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(minecraft)
+[01:15:17] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(minecraft)
+[01:15:17] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(minecraft)
+[01:15:17] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(minecraft)
+[01:15:17] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(minecraft)
+[01:15:17] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[01:15:17] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(videoloading)
+[01:15:17] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(videoloading)
+[01:15:17] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(videoloading)
+[01:15:17] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(videoloading)
+[01:15:17] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(videoloading)
+[01:15:17] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(videoloading)]
+[01:15:17] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(net.minecraftforge.forge)
+[01:15:17] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(net.minecraftforge.forge)
+[01:15:17] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(net.minecraftforge.forge)
+[01:15:17] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(net.minecraftforge.forge)
+[01:15:17] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(net.minecraftforge.forge)
+[01:15:17] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(net.minecraftforge.forge)]
+[01:15:17] [main/DEBUG] [mixin/]: inject() running with 5 agents
+[01:15:17] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[01:15:17] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(mixin.synthetic)]
+[01:15:17] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[01:15:17] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(videoloading)]
+[01:15:17] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(net.minecraftforge.forge)]
+[01:15:17] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_client' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\LXY29\.gradle\caches\forge_gradle\assets, --assetIndex, 17]
+[01:15:17] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+[01:15:18] [main/DEBUG] [io.ne.ut.in.lo.InternalLoggerFactory/]: Using SLF4J as the default logging framework
+[01:15:18] [main/DEBUG] [io.ne.ut.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
+[01:15:18] [main/DEBUG] [io.ne.ut.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
+[01:15:18] [main/WARN] [os.ut.FileUtil/]: Configuration conflict: there is more than one oshi.properties file on the classpath: [jar:file:///C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.properties, jar:file:/C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.properties, jar:file:///C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.properties, jar:file:/C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.properties]
+[01:15:19] [Datafixer Bootstrap/INFO] [mojang/DataFixerBuilder]: 226 Datafixer optimizations took 274 milliseconds
+[01:15:19] [main/WARN] [os.ut.FileUtil/]: Configuration conflict: there is more than one oshi.architecture.properties file on the classpath: [jar:file:///C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.architecture.properties, jar:file:/C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.architecture.properties, jar:file:///C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.architecture.properties, jar:file:/C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.architecture.properties]
+[01:15:19] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/EntityType
+[01:15:20] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/LiquidBlock
+[01:15:20] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/FlowerPotBlock
+[01:15:20] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/effect/MobEffectInstance
+[01:15:21] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/biome/Biome
+[01:15:21] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/animal/frog/Tadpole
+[01:15:21] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/BucketItem
+[01:15:22] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/monster/Spider
+[01:15:22] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/monster/Zombie
+[01:15:22] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/monster/ZombieVillager
+[01:15:22] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/monster/Evoker$EvokerSummonSpellGoal
+[01:15:22] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/animal/horse/SkeletonTrapGoal
+[01:15:22] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/monster/Strider
+[01:15:22] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/npc/Villager
+[01:15:23] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/levelgen/structure/structures/OceanRuinPieces$OceanRuinPiece
+[01:15:23] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/levelgen/structure/structures/SwampHutPiece
+[01:15:23] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/levelgen/structure/structures/OceanMonumentPieces$OceanMonumentPiece
+[01:15:23] [pool-5-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces$WoodlandMansionPiece
+[01:15:23] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/LXY29/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.1.21_mapped_official_1.21.1/forge-1.21.1-52.1.21_mapped_official_1.21.1.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[01:15:23] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/LXY29/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.1.21_mapped_official_1.21.1/forge-1.21.1-52.1.21_mapped_official_1.21.1.jar%230!/data/.mcassetsroot' uses unexpected schema
+[01:15:23] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[01:15:23] [Render thread/INFO] [minecraft/Minecraft]: Setting user: Dev
+[01:15:23] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.3.3+5
+[01:15:24] [Render thread/DEBUG] [ne.mi.co.ForgeI18n/CORE]: Loading I18N data entries: 7109
+[01:15:24] [Render thread/DEBUG] [ne.mi.fm.ModWorkManager/LOADING]: Using 20 threads for parallel mod-loading
+[01:15:24] [Render thread/FATAL] [ne.mi.fm.ModLoader/LOADING]: File D:\CodeLibrary\VL-1.21.1-forge\build\resources\main constructed 0 mods: [], but had 1 mods specified: [videoloading]
+[01:15:24] [Render thread/FATAL] [ne.mi.fm.ModLoader/LOADING]: The following classes are missing, but are reported in the mods.toml: [videoloading]
+[01:15:24] [Render thread/FATAL] [ne.mi.fm.ModLoader/LOADING]: The following mods are missing, but have classes in the jar: []
+[01:15:24] [Render thread/DEBUG] [ne.mi.fm.ja.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader TransformingClassLoader[TRANSFORMER]@1700751834 - got SecureModuleClassLoader[LAYER PLUGIN]@1912172027
+[01:15:24] [Render thread/DEBUG] [ne.mi.fm.ja.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod
+[01:15:24] [Render thread/DEBUG] [ne.mi.fm.ja.FMLModContainer/LOADING]: Loaded modclass net.minecraftforge.forge/net.minecraftforge.common.ForgeMod with TransformingClassLoader[TRANSFORMER]@1700751834
+[01:15:24] [Render thread/FATAL] [ne.mi.fm.ModLoader/CORE]: Failed to initialize mod containers
+net.minecraftforge.fml.ModLoadingException: The Mod File D:\CodeLibrary\VL-1.21.1-forge\build\resources\main has mods that were not found
+	at LAYER PLUGIN/net.minecraftforge.fmlcore@1.21.1-52.1.21/net.minecraftforge.fml.ModLoader.buildMods(ModLoader.java:301) ~[fmlcore-1.21.1-52.1.21.jar:1.0]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[?:?]
 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
@@ -475,32 +266,19 @@ net.minecraftforge.fml.loading.moddiscovery.InvalidModFileException: Missing req
 	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616) ~[?:?]
 	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622) ~[?:?]
 	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627) ~[?:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.ModFileInfo.<init>(ModFileInfo.java:112) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.ModFileParser.modsTomlParser(ModFileParser.java:51) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.ModFileParser.readModList(ModFileParser.java:33) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.ModFile.<init>(ModFile.java:71) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.ModFile.<init>(ModFile.java:60) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider.createMod(AbstractModProvider.java:72) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider.createMod(AbstractModProvider.java:52) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider.createMod(AbstractModProvider.java:47) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator.scanMods(ClasspathLocator.java:78) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer.discoverMods(ModDiscoverer.java:84) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.FMLLoader.beginModScan(FMLLoader.java:161) ~[fmlloader-1.21.1-52.1.21.jar!/:52.1.21]
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.FMLServiceProvider.beginScanning(FMLServiceProvider.java:57) ~[fmlloader-1.21.1-52.1.21.jar!/:52.1.21]
-	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.TransformationServiceDecorator.runScan(TransformationServiceDecorator.java:98) ~[modlauncher-10.2.4.jar!/:?]
-	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.TransformationServicesHandler.lambda$runScanningTransformationServices$4(TransformationServicesHandler.java:100) ~[modlauncher-10.2.4.jar!/:?]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) [?:?]
-	at java.base/java.util.HashMap$ValueSpliterator.forEachRemaining(HashMap.java:1787) [?:?]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) [?:?]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) [?:?]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575) [?:?]
-	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260) [?:?]
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616) [?:?]
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622) [?:?]
-	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627) [?:?]
-	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.TransformationServicesHandler.runScanningTransformationServices(TransformationServicesHandler.java:102) [modlauncher-10.2.4.jar!/:?]
-	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.TransformationServicesHandler.initializeTransformationServices(TransformationServicesHandler.java:49) [modlauncher-10.2.4.jar!/:?]
-	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:88) [modlauncher-10.2.4.jar!/:?]
+	at LAYER PLUGIN/net.minecraftforge.fmlcore@1.21.1-52.1.21/net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:184) ~[fmlcore-1.21.1-52.1.21.jar:1.0]
+	at TRANSFORMER/net.minecraftforge.forge@52.1.21/net.minecraftforge.client.loading.ClientModLoader.lambda$begin$1(ClientModLoader.java:49) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/net.minecraftforge.forge@52.1.21/net.minecraftforge.client.loading.ClientModLoader.lambda$createRunnableWithCatch$4(ClientModLoader.java:69) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/net.minecraftforge.forge@52.1.21/net.minecraftforge.client.loading.ClientModLoader.begin(ClientModLoader.java:49) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.<init>(Minecraft.java:478) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:212) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:85) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:69) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:77) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:97) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:116) [modlauncher-10.2.4.jar!/:?]
 	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [modlauncher-10.2.4.jar!/:?]
 	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.4.jar!/:?]
 	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
@@ -509,70 +287,283 @@ net.minecraftforge.fml.loading.moddiscovery.InvalidModFileException: Missing req
 	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
 	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
 	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
-[01:12:18] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /
-[01:12:18] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {52.1.21}
-[01:12:18] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from , it does not contain dependency information.
-[01:12:18] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from , it does not contain dependency information.
-[01:12:18] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[01:12:18] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {minecraft} mods - versions {1.21.1}
-[01:12:18] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
-[01:12:18] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /
-[01:12:18] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {52.1.21}
-[01:12:18] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
-[01:12:19] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Found coremod field_to_method with Javascript path coremods/field_to_method.js
-[01:12:19] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Found coremod method_redirector with Javascript path coremods/method_redirector.js
-[01:12:19] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Found coremod /coremods/field_to_method.js
-[01:12:19] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Found coremod /coremods/method_redirector.js
-[01:12:19] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
-[01:12:19] [main/DEBUG] [ne.mi.fm.lo.LanguageLoadingProvider/CORE]: Found 0 language providers
-[01:12:19] [main/ERROR] [ne.mi.fm.lo.LanguageLoadingProvider/LOADING]: Missing language minecraft version 1 wanted by 
-[01:12:19] [main/ERROR] [ne.mi.fm.lo.LanguageLoadingProvider/LOADING]: Missing language javafml version [24,] wanted by 
-[01:12:19] [main/DEBUG] [ne.mi.fm.lo.ModSorter/]: Configured system mods: [minecraft, forge]
-Exception in thread "main" java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133)
-	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53)
-	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19)
-Caused by: java.lang.IllegalStateException: Failed to find system mod: minecraft
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.ModSorter.detectSystemMods(ModSorter.java:172)
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.ModSorter.buildUniqueList(ModSorter.java:150)
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.ModSorter.sort(ModSorter.java:54)
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.moddiscovery.ModValidator.stage2Validation(ModValidator.java:127)
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.FMLLoader.completeScan(FMLLoader.java:169)
-	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.FMLServiceProvider.completeScan(FMLServiceProvider.java:62)
-	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.TransformationServiceDecorator.onCompleteScan(TransformationServiceDecorator.java:104)
-	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.TransformationServicesHandler.lambda$triggerScanCompletion$7(TransformationServicesHandler.java:177)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.HashMap$ValueSpliterator.forEachRemaining(HashMap.java:1787)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
-	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
-	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
-	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.TransformationServicesHandler.triggerScanCompletion(TransformationServicesHandler.java:179)
-	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:97)
-	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:75)
-	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17)
-	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	... 4 more
+Transformer Audit:
+  net.minecraft.client.Minecraft
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.client.main.Main
+    REASON: classloading
+  net.minecraftforge.client.loading.ClientModLoader
+    REASON: classloading
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.sound.SoundEngineLoadEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterColorHandlersEvent$Block to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterColorHandlersEvent$Item to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterParticleProvidersEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RenderLevelStageEvent$RegisterStageEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.AddGuiOverlayLayersEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterClientReloadListenersEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$RegisterLayerDefinitions to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$RegisterRenderers to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterTextureAtlasSpriteLoadersEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterClientTooltipComponentFactoriesEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterEntitySpectatorShadersEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterKeyMappingsEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterRecipeBookCategoriesEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterDimensionSpecialEffectsEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterNamedRenderTypesEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterColorHandlersEvent$ColorResolvers to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterItemDecorationsEvent to a broken mod state
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterPresetEditorsEvent to a broken mod state
+[01:15:24] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: vanilla
+[01:15:24] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.ModelEvent$RegisterGeometryLoaders to a broken mod state
+[01:15:24] [Worker-Main-13/INFO] [minecraft/UnihexProvider]: Found unifont_all_no_pua-15.1.05.hex, loading
+[01:15:24] [Worker-Main-18/INFO] [minecraft/UnihexProvider]: Found unifont_jp_patch-15.1.05.hex, loading
+[01:15:25] [Worker-Main-11/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.ModelEvent$RegisterAdditional to a broken mod state
+[01:15:25] [Worker-Main-11/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.ModelEvent$ModifyBakingResult to a broken mod state
+[01:15:25] [Render thread/DEBUG] [ne.mi.co.ForgeI18n/CORE]: Loading I18N data entries: 6881
+[01:15:25] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:item.goat_horn.play
+[01:15:25] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[01:15:26] [Render thread/INFO] [mojang/Library]: OpenAL initialized on device OpenAL Soft on ���� (NVIDIA High Definition Audio)
+[01:15:26] [Render thread/INFO] [minecraft/SoundEngine]: Sound engine started
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.sound.SoundEngineLoadEvent to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.ModelEvent$BakingCompleted to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$CreateSkullModels to a broken mod state
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.EntityRenderersEvent$AddLayers to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.TextureStitchEvent$Post to a broken mod state
+[01:15:26] [Render thread/WARN] [minecraft/ShaderInstance]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[01:15:26] [Render thread/ERROR] [ne.mi.fm.ModLoader/]: Cowardly refusing to send event net.minecraftforge.client.event.RegisterShadersEvent to a broken mod state
+[01:15:26] [Render thread/DEBUG] [ne.mi.co.ForgeI18n/CORE]: Loading I18N data entries: 7109
+[01:15:26] [Render thread/WARN] [os.ut.FileUtil/]: Configuration conflict: there is more than one oshi.architecture.properties file on the classpath: [jar:file:///C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.architecture.properties, jar:file:/C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.architecture.properties, jar:file:///C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.architecture.properties, jar:file:/C:/Users/LXY29/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar!/oshi.architecture.properties]
+[01:15:26] [Render thread/ERROR] [minecraft/CrashReport]: Negative index in crash report handler (25/27)
+[01:15:26] [Render thread/FATAL] [ne.mi.cl.lo.ClientModLoader/]: Crash report saved to .\crash-reports\crash-2026-11-08_01.15.26-fml.txt
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
 
-> Task :runClient FAILED
+Time: 2026-11-08 01:15:26
+Description: Mod loading error has occurred
 
-FAILURE: Build failed with an exception.
+java.lang.Exception: Mod Loading has failed
+	at TRANSFORMER/net.minecraftforge.forge@52.1.21/net.minecraftforge.logging.CrashReportExtender.dumpModLoadingCrashReport(CrashReportExtender.java:49) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/net.minecraftforge.forge@52.1.21/net.minecraftforge.client.loading.ClientModLoader.completeModLoading(ClientModLoader.java:116) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.lambda$new$7(Minecraft.java:616) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.Util.ifElse(Util.java:513) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.lambda$new$8(Minecraft.java:609) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/net.minecraftforge.forge@52.1.21/net.minecraftforge.client.loading.ForgeLoadingOverlay.render(ForgeLoadingOverlay.java:146) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:883) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1181) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:795) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:228) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:85) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:69) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:77) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:97) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:116) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.4.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+Transformer Audit:
+  net.minecraft.Util
+    REASON: classloading
+  net.minecraft.client.Minecraft
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.client.main.Main
+    REASON: classloading
+  net.minecraft.client.renderer.GameRenderer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraftforge.client.loading.ClientModLoader
+    REASON: classloading
+  net.minecraftforge.client.loading.ForgeLoadingOverlay
+    REASON: classloading
+  net.minecraftforge.logging.CrashReportExtender
+    REASON: classloading
 
-* What went wrong:
-Execution failed for task ':runClient'.
-> Process 'command 'E:\Program Files\BellSoft\LibericaJDK-21\bin\java.exe'' finished with non-zero exit value 1
 
-* Try:
-> Run with --stacktrace option to get the stack trace.
-> Run with --info or --debug option to get more log output.
-> Run with --scan to get full insights.
-> Get more help at https://help.gradle.org.
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
 
-BUILD FAILED in 55s
-10 actionable tasks: 8 executed, 2 up-to-date
+-- Head --
+Thread: Render thread
+Suspected Mods: NONE
+Stacktrace:
+	at TRANSFORMER/net.minecraftforge.forge@52.1.21/net.minecraftforge.logging.CrashReportExtender.lambda$dumpModLoadingCrashReport$7(CrashReportExtender.java:52) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar%231!/:?]
+Transformer Audit:
+  net.minecraftforge.logging.CrashReportExtender
+    REASON: classloading
+-- NO MOD INFO AVAILABLE --
+Details:
+	Mod File: NO FILE INFO
+	Failure message: The Mod File D:\CodeLibrary\VL-1.21.1-forge\build\resources\main has mods that were not found
+	Mod Version: NO MOD INFO AVAILABLE
+	Mod Issue URL: NOT PROVIDED
+	Exception message: MISSING EXCEPTION MESSAGE
+Stacktrace:
+	at TRANSFORMER/net.minecraftforge.forge@52.1.21/net.minecraftforge.logging.CrashReportExtender.lambda$dumpModLoadingCrashReport$7(CrashReportExtender.java:52) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at TRANSFORMER/net.minecraftforge.forge@52.1.21/net.minecraftforge.logging.CrashReportExtender.dumpModLoadingCrashReport(CrashReportExtender.java:50) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/net.minecraftforge.forge@52.1.21/net.minecraftforge.client.loading.ClientModLoader.completeModLoading(ClientModLoader.java:116) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.lambda$new$7(Minecraft.java:616) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.Util.ifElse(Util.java:513) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.lambda$new$8(Minecraft.java:609) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/net.minecraftforge.forge@52.1.21/net.minecraftforge.client.loading.ForgeLoadingOverlay.render(ForgeLoadingOverlay.java:146) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:883) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1181) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:795) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:228) ~[forge-1.21.1-52.1.21_mapped_official_1.21.1.jar:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:85) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.21/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:69) ~[fmlloader-1.21.1-52.1.21.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:77) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:97) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:116) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.4.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+Transformer Audit:
+  net.minecraft.Util
+    REASON: classloading
+  net.minecraft.client.Minecraft
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.client.main.Main
+    REASON: classloading
+  net.minecraft.client.renderer.GameRenderer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraftforge.client.loading.ClientModLoader
+    REASON: classloading
+  net.minecraftforge.client.loading.ForgeLoadingOverlay
+    REASON: classloading
+  net.minecraftforge.logging.CrashReportExtender
+    REASON: classloading
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.3, BellSoft
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), BellSoft
+	Memory: 123697976 bytes (117 MiB) / 538968064 bytes (514 MiB) up to 4236247040 bytes (4040 MiB)
+	CPUs: 20
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i7-14700HX
+	Identifier: Intel64 Family 6 Model 183 Stepping 1
+	Microarchitecture: Raptor Lake
+	Frequency (GHz): 2.30
+	Number of physical packages: 1
+	Number of physical CPUs: 20
+	Number of logical CPUs: 20
+	Graphics card #0 name: NVIDIA GeForce RTX 4070 Laptop GPU
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 8188.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.15.9649
+	Graphics card #1 name: Intel(R) UHD Graphics
+	Graphics card #1 vendor: Intel Corporation
+	Graphics card #1 VRAM (MiB): 2048.00
+	Graphics card #1 deviceId: VideoController2
+	Graphics card #1 versionInfo: 32.0.101.6790
+	Memory slot #0 capacity (MiB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 5.60
+	Memory slot #0 type: Unknown
+	Virtual memory max (MiB): 37275.99
+	Virtual memory used (MiB): 31206.60
+	Swap memory total (MiB): 21116.13
+	Swap memory used (MiB): 3196.56
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 49326.98, total: 204801.00
+	Space in storage for workdir (MiB): available: 23957.28, total: 153601.00
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 10.2.4
+	ModLauncher launch target: forge_userdev_client
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/ slf4jfixer PLUGINSERVICE 
+		/ runtimedistcleaner PLUGINSERVICE 
+		/ runtime_enum_extender PLUGINSERVICE 
+		/ object_holder_definalize PLUGINSERVICE 
+		/ capability_token_subclass PLUGINSERVICE 
+		/ accesstransformer PLUGINSERVICE 
+		/ eventbus PLUGINSERVICE 
+		/ mixin PLUGINSERVICE 
+		/ fml TRANSFORMATIONSERVICE 
+		/ mixin TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		lowcodefml@52
+		minecraft@1.0
+		javafml@52.1.21
+	Mod List: 
+		                                                  |Minecraft                     |minecraft                     |1.21.1              |NONE      |Manifest: NOSIGNATURE
+		main                                              |VideoLoading                  |videoloading                  |1.0.0               |NONE      |Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |52.1.21             |NONE      |Manifest: NOSIGNATURE[01:15:29] [Render thread/INFO] [minecraft/Minecraft]: Stopping!
+[01:15:29] [Render thread/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Unloading configs type CLIENT
+[01:15:29] [Render thread/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Unloading configs type COMMON
+
+BUILD SUCCESSFUL in 23s
+10 actionable tasks: 3 executed, 7 up-to-date

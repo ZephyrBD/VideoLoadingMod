@@ -42,6 +42,9 @@ minecraft {
         client {
             workingDirectory file('run')
             property 'forge.logging.console.level', 'debug'
+            // Forge 不支持 mods.toml 的 [[mixins]]，dev 环境没有 jar manifest，
+            // 必须用该参数让 Mixin 加载配置（生产环境由 jar manifest 的 MixinConfigs 属性声明）
+            args '--mixin.config=videoloading.mixins.json'
             mods { videoloading { source sourceSets.main } }
         }
     }
@@ -89,13 +92,26 @@ officialToSrgTsrgFile.text = srgToOfficialTsrg.readLines('UTF-8').collect { line
     return parts.length == 2 ? "${parts[1]} ${parts[0]}" : line  // 类行：srg official → official srg
 }.join('\n')
 
+def refmapOutputDir = layout.buildDirectory.dir("mixin-refmap").get().asFile
+
 compileJava {
     options.compilerArgs += [
             '-AdefaultObfuscationEnv=searge',
             '-AmappingTypes=tsrg',
             "-AreobfTsrgFile=${officialToSrgTsrgFile.absolutePath}",
-            "-AoutRefMapFile=${layout.buildDirectory.get().asFile}/classes/java/main/${project.archives_base_name}.refmap.json"
+            "-AoutRefMapFile=${refmapOutputDir}/videoloading.refmap.json"
     ]
+}
+
+// 把 classes 与 resources 合并到同一输出目录。
+// Minecraft 1.20.5+ 的 FML 移除了 MOD_CLASSES/UnionFileSystem 机制，模块必须
+// 是单个目录；不合并的话 runClient 只会把 build/resources/main 当 mod 文件，
+// 扫不到 @Mod 类，报 "constructed 0 mods"。
+// （1.21.1 官方 MDK 同款写法，日后会迁移进 ForgeGradle 本体）
+sourceSets.each {
+    def dir = layout.buildDirectory.dir("sourcesSets/${it.name}")
+    it.output.resourcesDir = dir
+    it.java.destinationDirectory = dir
 }
 
 java {
@@ -106,6 +122,12 @@ java {
 
 jar {
     inputs.property "archivesName", project.base.archivesName
+
+    // refmap 只随 jar 发布（SRG 名），dev 运行时输出目录里没有它，
+    // Mixin 会直接用注解里的官方名匹配 dev 的官方名运行时
+    from(refmapOutputDir) {
+        include 'videoloading.refmap.json'
+    }
 
     manifest {
         attributes([
