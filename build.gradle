@@ -41,6 +41,14 @@ minecraft {
     // 1.20.1 official（Mojang）映射，生产环境由 reobfJar 转回 SRG
     mappings channel: 'official', version: project.minecraft_version
     copyIdeResources = true
+
+    runs {
+        client {
+            workingDirectory file('run')
+            property 'forge.logging.console.level', 'debug'
+            mods { videoloading { source sourceSets.main } }
+        }
+    }
 }
 
 dependencies {
