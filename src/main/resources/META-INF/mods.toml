@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[52,)"
+license="GPL-2.0"
+issueTrackerURL="https://github.com/zephyrbd/VideoLoading/issues"
+
+[[mods]]
+modId="videoloading"
+version="${version}"
+displayName="VideoLoading"
+authors="ZephyrBD"
+# 客户端-only：不校验服务端 mod 列表
+displayTest="IGNORE_SERVER_VERSION"
+description='''
+Replaces the Minecraft loading screen with a startup video. 必须完整播放一遍视频才进入游戏，加载过慢时视频与音频循环播放。
+'''
+[[dependencies.videoloading]]
+    modId="forge"
+    type="required"
+    versionRange="[52,)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.videoloading]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1,1.22)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[mixins]]
+config="videoloading.mixins.json"

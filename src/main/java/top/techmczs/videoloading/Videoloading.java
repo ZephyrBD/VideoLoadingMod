@@ -14,22 +14,20 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-package top.techmczs.videoloading.datagen;
+package top.techmczs.videoloading;
 
-import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-
-import top.techmczs.videoloading.datagen.languages.ModENUSProvider;
-import top.techmczs.videoloading.datagen.languages.ModZHCNProvider;
+import net.minecraftforge.fml.common.Mod;
 
 /**
- * 数据生成入口：目前只生成语言文件（en_us / zh_cn）。
+ * mod 入口：纯客户端 mod，不注册任何内容，实际逻辑都在
+ * {@link top.techmczs.videoloading.client.StartupVideo} 与 mixin 里。
+ * 构造函数保持空实现，专用服务器上加载也无副作用。
  */
-public class VideoLoadingDataGenerator implements DataGeneratorEntrypoint {
-    @Override
-    public void onInitializeDataGenerator(FabricDataGenerator generator) {
-        FabricDataGenerator.Pack pack = generator.createPack();
-        pack.addProvider(ModENUSProvider::new);
-        pack.addProvider(ModZHCNProvider::new);
+@Mod(Videoloading.MODID)
+public class Videoloading {
+    public static final String MODID = "videoloading";
+
+    public Videoloading() {
+        // 无需初始化：启动视频在 LoadingOverlay 首次渲染时才开始
     }
 }

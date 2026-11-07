@@ -9,8 +9,9 @@ pluginManagement {
 			url = 'https://maven.aliyun.com/repository/public'
 		}
 		maven {
-			name = 'Fabric'
-			url = 'https://maven.fabricmc.net/'
+			// ForgeGradle 插件只发布在 Forge 官方 maven，必须直连
+			name = 'MinecraftForge'
+			url = 'https://maven.minecraftforge.net'
 		}
 		mavenCentral()
 		gradlePluginPortal()
