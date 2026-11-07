@@ -1,20 +1,20 @@
 {
   "required": true,
   "package": "top.techmczs.videoloading.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "videoloading.refmap.json",
   "client": [
-    "client.GameOptionsScreenAccessor",
-    "client.MinecraftClientMixin",
-    "client.MouseMixin",
+    "client.LoadingOverlayMixin",
+    "client.MinecraftMixin",
+    "client.MouseHandlerMixin",
     "client.NativeImageAccessor",
-    "client.SoundOptionsScreenMixin",
-    "client.SoundSystemMixin",
-    "client.SplashOverlayMixin"
+    "client.SoundEngineMixin",
+    "client.SoundOptionsScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "overwrites": {
     "requireAnnotations": true
-	}
+  }
 }

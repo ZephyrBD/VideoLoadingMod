@@ -1,8 +1,32 @@
+// MixinGradle 通过 buildscript 引入（它不在插件市场发布）
+buildscript {
+    repositories {
+        maven {
+            name = 'Aliyun'
+            url = 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            name = 'MinecraftForge'
+            url = 'https://maven.minecraftforge.net'
+        }
+        maven {
+            name = 'SpongePowered'
+            url = 'https://repo.spongepowered.org/repository/maven-public/'
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.spongepowered:mixingradle:${project.mixingradle_version}"
+    }
+}
+
 plugins {
-    id 'fabric-loom' version "${loom_version}"
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id 'maven-publish'
     id 'com.github.hierynomus.license' version '0.16.1'
 }
+
+apply plugin: 'org.spongepowered.mixin'
 
 version = project.mod_version
 group = project.maven_group
@@ -11,49 +35,47 @@ base {
     archivesName = project.archives_base_name
 }
 
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    // 1.20.1 official（Mojang）映射，生产环境由 reobfJar 转回 SRG
+    mappings channel: 'official', version: project.minecraft_version
+    copyIdeResources = true
+}
+
+dependencies {
+    // Forge 官方源（阿里云没有 Forge artifacts）
+    minecraft "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
+
+    // Mixin 注解处理器：生成 refmap（生产环境 SRG 名映射）
+    annotationProcessor "org.spongepowered:mixin:${project.mixin_version}:processor"
+}
+
+mixin {
+    add sourceSets.main, "${project.archives_base_name}.refmap.json"
+    config "${project.archives_base_name}.mixins.json"
+}
+
 repositories {
-    // 国内镜像优先，Fabric 官方源兜底（阿里云没有 Fabric 的 artifacts）
+    // 国内依赖走阿里云；Forge/Mojang 相关由 ForgeGradle 自行处理
     maven {
         name = 'Aliyun'
         url = 'https://maven.aliyun.com/repository/public'
     }
-    maven {
-        name = 'Fabric'
-        url = 'https://maven.fabricmc.net/'
-    }
     mavenCentral()
-}
-
-dependencies {
-    minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    // datagen 引入 Fabric API（运行时 fabric.mod.json 不声明依赖）
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-}
-
-fabricApi {
-    configureDataGeneration {
-        client = true
-    }
 }
 
 processResources {
     inputs.property "version", project.mod_version
 
-    filesMatching("fabric.mod.json") {
+    filesMatching("META-INF/mods.toml") {
         expand "version": inputs.properties.version
     }
 }
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.release = 21
-}
-
-java {
-    withSourcesJar()
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    it.options.release = 17
+    it.options.encoding = 'UTF-8'
 }
 
 jar {
@@ -62,6 +84,8 @@ jar {
     from("LICENSE") {
         rename { "${it}_${inputs.properties.archivesName}" }
     }
+    // 生产环境类名是 SRG，构建产物必须重混淆
+    finalizedBy 'reobfJar'
 }
 
 // ===== License 插件配置 =====
@@ -77,7 +101,6 @@ license {
     }
 
     // 排除无需检查的目录
-    exclude '**/generated/**'
     exclude '**/META-INF/**'
 }
 
