@@ -230,8 +230,10 @@ public final class StartupVideo {
         float scale = Math.min((float) windowWidth / FRAME_WIDTH, (float) windowHeight / FRAME_HEIGHT);
         int drawWidth = Math.round(FRAME_WIDTH * scale);
         int drawHeight = Math.round(FRAME_HEIGHT * scale);
+        // 11 参重载：把整帧纹理区域缩放到 drawWidth×drawHeight；
+        // 9 参重载是纹理像素 1:1 映射（不缩放），会只显示画面左上角
         graphics.blit(VIDEO_ID, (windowWidth - drawWidth) / 2, (windowHeight - drawHeight) / 2,
-                0, 0, drawWidth, drawHeight, FRAME_WIDTH, FRAME_HEIGHT);
+                drawWidth, drawHeight, 0.0F, 0.0F, FRAME_WIDTH, FRAME_HEIGHT, FRAME_WIDTH, FRAME_HEIGHT);
         return true;
     }
 
