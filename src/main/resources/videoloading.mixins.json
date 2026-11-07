@@ -1,9 +1,8 @@
 {
   "required": true,
   "package": "top.techmczs.videoloading.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_17",
   "client": [
-    "client.GameOptionsScreenAccessor",
     "client.MinecraftClientMixin",
     "client.MouseMixin",
     "client.NativeImageAccessor",

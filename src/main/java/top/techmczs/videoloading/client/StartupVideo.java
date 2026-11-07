@@ -72,7 +72,7 @@ import top.techmczs.videoloading.mixin.client.NativeImageAccessor;
 public final class StartupVideo {
     private static final Logger LOGGER = LoggerFactory.getLogger("VideoLoading/StartupVideo");
 
-    private static final Identifier VIDEO_ID = Identifier.of("videoloading", "logo_video");
+    private static final Identifier VIDEO_ID = new Identifier("videoloading", "logo_video");
     private static final String RESOURCE_DIR = "/assets/videoloading/logo_video";
     private static final int FRAME_WIDTH = 960;
     private static final int FRAME_HEIGHT = 540;
