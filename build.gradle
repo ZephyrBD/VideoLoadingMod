@@ -37,6 +37,14 @@ minecraft {
     mappings channel: project.mapping_channel, version: project.mapping_version
 
     copyIdeResources = false
+
+    runs {
+        client {
+            workingDirectory file('run')
+            property 'forge.logging.console.level', 'debug'
+            mods { videoloading { source sourceSets.main } }
+        }
+    }
 }
 
 processResources {
