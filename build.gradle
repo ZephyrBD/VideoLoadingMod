@@ -26,6 +26,10 @@ legacyForge {
     runs {
         client {
             client()
+            // Forge 1.20.1 不支持 mods.toml 的 [[mixins]]，dev 环境没有 jar manifest，
+            // 必须用该参数让 Mixin 在早期阶段加载配置（生产环境由 jar manifest 的 MixinConfigs 属性声明）
+            programArgument '--mixin.config'
+            programArgument 'videoloading.mixins.json'
         }
     }
 

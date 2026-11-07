@@ -11,7 +11,7 @@
     "client.NativeImageAccessor",
     "client.SoundOptionsScreenMixin",
     "client.SoundEngineMixin",
-    "client.LoadingOverlayMixin"
+    "client.ForgeLoadingOverlayMixin"
   ],
   "injectors": {
     "defaultRequire": 1

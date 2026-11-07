@@ -59,7 +59,7 @@ import top.techmczs.videoloading.mixin.client.NativeImageAccessor;
  * 而是用 {@code javax.sound.sampled} 直接播放 audio.wav。
  *
  * <p>播完策略：必须完整播完一遍才允许离开加载界面（由
- * {@code LoadingOverlayMixin} 挡住 overlay 的关闭）；如果 mod 太多
+ * {@code ForgeLoadingOverlayMixin} 挡住 overlay 的关闭）；如果 mod 太多
  * 加载时间超过视频时长，视频和音频会循环播放直到加载结束。
  * 素材由 {@code scripts/prepare_startup_video.py} 从根目录的
  * video.mp4 / audio.mp3 生成。
@@ -235,7 +235,7 @@ public final class StartupVideo {
 
     /**
      * 视频播放期间替代原版 {@code GenericMessageScreen} 的 HUD：
-     * 屏幕底部一条半透明横幅，居中「正在加载 Minecraft」，
+     * 底部一条只有文字的横幅「正在加载 Minecraft」，
      * 以及（玩家点击屏幕后）右上角的跳过按钮。
      */
     public static void renderHud(GuiGraphics context) {
@@ -243,7 +243,7 @@ public final class StartupVideo {
         int width = context.guiWidth();
         int height = context.guiHeight();
 
-        context.fill(0, height - 40, width, height, 0x88000000);
+        // 底部横幅只有文字，不画背景条（视频画面本身就是黑的）
         context.drawCenteredString(client.font,
                 Component.translatable("gui.loadingMinecraft"), width / 2, height - 26, 0xFFFFFFFF);
 

@@ -13,3 +13,6 @@ run/
 # 启动视频原始素材（用 scripts/prepare_startup_video.py 转码后提交派生文件）
 /video.mp4
 /audio.mp3
+
+# runClient 输出日志
+run-client.log
