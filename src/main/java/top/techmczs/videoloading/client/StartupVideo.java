@@ -247,7 +247,7 @@ public final class StartupVideo {
         int width = graphics.guiWidth();
         int height = graphics.guiHeight();
 
-        graphics.fill(0, height - 40, width, height, 0x88000000);
+        // 底部横幅只有文字，不画背景（视频画面本身就是黑的）
         graphics.drawCenteredString(client.font,
                 Component.translatable("gui.loadingMinecraft"), width / 2, height - 26, 0xFFFFFFFF);
 

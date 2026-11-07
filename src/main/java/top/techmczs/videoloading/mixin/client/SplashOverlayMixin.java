@@ -20,6 +20,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.LoadingOverlay;
+import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.server.packs.resources.ReloadInstance;
 import net.minecraftforge.client.loading.ForgeLoadingOverlay;
 
@@ -31,6 +32,10 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import top.techmczs.videoloading.client.StartupVideo;
+
+import com.mojang.logging.LogUtils;
+
+import org.slf4j.Logger;
 
 /**
  * 把 Forge 的加载界面替换为 mod 的启动视频。
@@ -48,6 +53,7 @@ import top.techmczs.videoloading.client.StartupVideo;
  */
 @Mixin(value = ForgeLoadingOverlay.class, remap = false)
 public abstract class SplashOverlayMixin {
+    private static final Logger LOGGER = LogUtils.getLogger();
     @Shadow(remap = false)
     @Final
     private Minecraft minecraft;
@@ -79,9 +85,12 @@ public abstract class SplashOverlayMixin {
             StartupVideo.stop();
             this.minecraft.setOverlay(null);
             Screen pending = StartupVideo.takePendingScreen();
-            if (pending != null) {
-                this.minecraft.setScreen(pending);
+            if (pending == null) {
+                // 兜底：推迟机制意外丢失时也要显示主菜单，避免黑屏
+                pending = new TitleScreen();
+                LOGGER.info("放行时无缓存的待显示界面，兜底进入主菜单");
             }
+            this.minecraft.setScreen(pending);
         }
     }
 }
