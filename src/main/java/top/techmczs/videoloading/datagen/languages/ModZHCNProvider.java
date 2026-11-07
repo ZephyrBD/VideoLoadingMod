@@ -34,5 +34,7 @@ public class ModZHCNProvider extends FabricLanguageProvider {
     public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add(StartupVideoConfig.SKIP_KEY, "跳过");
         translationBuilder.add(StartupVideoConfig.VOLUME_KEY, "启动视频音量");
+        // 1.20.1 原版语言文件没有该 key，横幅文案需 mod 自带
+        translationBuilder.add("gui.loadingMinecraft", "正在加载 Minecraft");
     }
 }

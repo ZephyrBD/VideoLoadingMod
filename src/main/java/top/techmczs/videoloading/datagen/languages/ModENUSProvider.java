@@ -33,5 +33,7 @@ public class ModENUSProvider extends FabricLanguageProvider {
     public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add(StartupVideoConfig.SKIP_KEY, "Skip");
         translationBuilder.add(StartupVideoConfig.VOLUME_KEY, "Startup Video Volume");
+        // 1.20.1 原版语言文件没有该 key，横幅文案需 mod 自带
+        translationBuilder.add("gui.loadingMinecraft", "Loading Minecraft");
     }
 }
