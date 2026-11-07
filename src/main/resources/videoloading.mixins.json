@@ -8,6 +8,7 @@
     "client.MouseMixin",
     "client.NativeImageAccessor",
     "client.SoundOptionsScreenMixin",
+    "client.SoundSystemMixin",
     "client.SplashOverlayMixin"
   ],
   "injectors": {
