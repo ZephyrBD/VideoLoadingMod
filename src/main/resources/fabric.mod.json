@@ -16,6 +16,11 @@
 	"mixins": [
 		"videoloading.mixins.json"
 	],
+	"entrypoints": {
+		"fabric-datagen": [
+			"top.techmczs.videoloading.datagen.VideoLoadingDataGenerator"
+		]
+	},
 	"depends": {
 		"fabricloader": ">=0.16.14",
 		"minecraft": "~1.21.1",

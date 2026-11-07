@@ -44,9 +44,13 @@ public final class StartupVideoConfig {
     private static final String KEY_VOLUME = "startupVideoVolume";
     private static final double DEFAULT_VOLUME = 0.5D;
 
+    /** 翻译 key，datagen 与运行时共用一份 */
+    public static final String VOLUME_KEY = "videoloading.startup_video.volume";
+    public static final String SKIP_KEY = "videoloading.startup_video.skip";
+
     /** 音量相对主音量的系数，0~1；修改即保存并实时作用于正在播放的音频 */
     private static final SimpleOption<Double> VOLUME = new SimpleOption<>(
-            "videoloading.startup_video.volume",
+            VOLUME_KEY,
             SimpleOption.emptyTooltip(),
             (label, value) -> label.copy().append(": " + Math.round(value * 100D) + "%"),
             SimpleOption.DoubleSliderCallbacks.INSTANCE,

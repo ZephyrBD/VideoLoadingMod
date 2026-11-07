@@ -28,7 +28,14 @@ dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    // MixinExtras 由 Fabric Loader 0.16.x 自带（运行与编译均可用）
+    // datagen 引入 Fabric API（运行时 fabric.mod.json 不声明依赖）
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+}
+
+fabricApi {
+    configureDataGeneration {
+        client = true
+    }
 }
 
 processResources {

@@ -257,7 +257,7 @@ public final class StartupVideo {
             context.fill(skipX, SKIP_MARGIN, skipX + SKIP_WIDTH, SKIP_MARGIN + SKIP_HEIGHT, 0x66000000);
             context.drawBorder(skipX, SKIP_MARGIN, SKIP_WIDTH, SKIP_HEIGHT, 0xFFFFFFFF);
             context.drawCenteredTextWithShadow(client.textRenderer,
-                    Text.translatable("videoloading.startup_video.skip"),
+                    Text.translatable(StartupVideoConfig.SKIP_KEY),
                     skipX + SKIP_WIDTH / 2, SKIP_MARGIN + (SKIP_HEIGHT - 8) / 2, 0xFFFFFFFF);
         }
     }
