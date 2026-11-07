@@ -15,14 +15,14 @@ Replaces the Minecraft loading screen with a startup video. 必须完整播放�
 '''
 [[dependencies.videoloading]]
     modId="forge"
-    type="required"
+    mandatory=true
     versionRange="[52,)"
     ordering="NONE"
     side="CLIENT"
 
 [[dependencies.videoloading]]
     modId="minecraft"
-    type="required"
+    mandatory=true
     versionRange="[1.21.1,1.22)"
     ordering="NONE"
     side="CLIENT"
