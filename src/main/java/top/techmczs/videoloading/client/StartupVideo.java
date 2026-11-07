@@ -52,7 +52,7 @@ import org.slf4j.LoggerFactory;
 import top.techmczs.videoloading.mixin.client.NativeImageAccessor;
 
 /**
- * 启动视频播放器：在 {@code LoadingOverlay}（Mojang logo 加载界面）上
+ * 启动视频播放器：在 Forge 的 {@code ForgeLoadingOverlay} 加载界面上
  * 播放 mod 内置的启动视频，替代 Mojang logo。
  *
  * <p>架构：视频时长可能远超资源加载时间，无法把帧序列预先放进内存，
@@ -62,7 +62,7 @@ import top.techmczs.videoloading.mixin.client.NativeImageAccessor;
  * 而是用 {@code javax.sound.sampled} 直接播放 audio.wav。
  *
  * <p>播完策略：必须完整播完一遍才允许离开加载界面（由
- * {@code LoadingOverlayMixin} 挡住 overlay 的关闭）；如果 mod 太多
+ * {@code SplashOverlayMixin} 挡住 overlay 的关闭）；如果 mod 太多
  * 加载时间超过视频时长，视频和音频会循环播放直到加载结束。
  * 素材由 {@code scripts/prepare_startup_video.py} 从根目录的
  * video.mp4 / audio.mp3 生成。
@@ -207,7 +207,7 @@ public final class StartupVideo {
 
     /**
      * 绘制当前解码帧（黑底居中、等比适配窗口）。
-     * 返回 true 表示视频会话仍然活跃，{@code LoadingOverlay} 不应绘制原版 logo。
+     * 返回 true 表示视频会话仍然活跃，加载界面不应绘制 Forge 原进度条。
      */
     public static boolean renderFrame(GuiGraphics graphics) {
         if (!active) {
@@ -253,7 +253,7 @@ public final class StartupVideo {
         int width = graphics.guiWidth();
         int height = graphics.guiHeight();
 
-        graphics.fill(0, height - 40, width, height, 0x88000000);
+        // 底部横幅只有文字，不画背景（视频画面本身就是黑的）
         graphics.drawCenteredString(client.font,
                 Component.translatable("gui.loadingMinecraft"), width / 2, height - 26, 0xFFFFFFFF);
 
