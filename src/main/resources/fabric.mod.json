@@ -11,7 +11,7 @@
 		"homepage": "https://blog.techmczs.top",
 		"sources": "https://github.com/zephyrbd/VideoLoading"
 	},
-	"license": "GPL-2.0",
+	"license": "MIT",
 	"environment": "client",
 	"mixins": [
 		"videoloading.mixins.json"
