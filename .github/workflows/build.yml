@@ -70,3 +70,4 @@ jobs:
           gh release view "$TAG" >/dev/null 2>&1 || \
             gh release create "$TAG" --title "VideoLoading $TAG" --notes "VideoLoading $TAG — 按 MC 版本和加载器选择对应 jar"
           gh release upload "$TAG" "videoloading-${{ matrix.mc }}-${{ matrix.loader }}-1.0.jar" --clobber
+          gh release edit "$TAG" --draft=false
