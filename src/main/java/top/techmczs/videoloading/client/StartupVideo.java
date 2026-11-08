@@ -4,10 +4,14 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.attribute.PosixFilePermissions;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -18,13 +22,20 @@ import javax.sound.sampled.FloatControl;
 import javax.sound.sampled.LineEvent;
 
 import com.mojang.blaze3d.platform.NativeImage;
-import net.minecraft.Util;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.renderer.texture.DynamicTexture;import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.texture.DynamicTexture;
+import net.minecraft.client.renderer.texture.TextureManager;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.Util;
+
+import net.minecraftforge.fml.loading.FMLPaths;
 
 import org.lwjgl.system.MemoryUtil;
 import org.slf4j.Logger;
@@ -33,7 +44,7 @@ import org.slf4j.LoggerFactory;
 import top.techmczs.videoloading.mixin.client.NativeImageAccessor;
 
 /**
- * 启动视频播放器：在 {@code LoadingOverlay}（Mojang logo 加载界面）上
+ * 启动视频播放器：在 Forge 的 {@code ForgeLoadingOverlay} 加载界面上
  * 播放 mod 内置的启动视频，替代 Mojang logo。
  *
  * <p>架构：视频时长可能远超资源加载时间，无法把帧序列预先放进内存，
@@ -43,7 +54,7 @@ import top.techmczs.videoloading.mixin.client.NativeImageAccessor;
  * 而是用 {@code javax.sound.sampled} 直接播放 audio.wav。
  *
  * <p>播完策略：必须完整播完一遍才允许离开加载界面（由
- * {@code ForgeLoadingOverlayMixin} 挡住 overlay 的关闭）；如果 mod 太多
+ * {@code SplashOverlayMixin} 挡住 overlay 的关闭）；如果 mod 太多
  * 加载时间超过视频时长，视频和音频会循环播放直到加载结束。
  * 素材由 {@code scripts/prepare_startup_video.py} 从根目录的
  * video.mp4 / audio.mp3 生成。
@@ -112,9 +123,10 @@ public final class StartupVideo {
             Path audio = extractResource("audio.wav", "audio.wav");
 
             NativeImage blank = new NativeImage(NativeImage.Format.RGBA, FRAME_WIDTH, FRAME_HEIGHT, false);
-            blank.fillRect(0, 0, FRAME_WIDTH, FRAME_HEIGHT, 0xFF000000);
+            fillBlank(blank);
             texture = new DynamicTexture(blank);
-            client.getTextureManager().register(VIDEO_ID, texture);
+            TextureManager textures = client.getTextureManager();
+            textures.register(VIDEO_ID, texture);
 
             for (int i = 0; i < POOL_SIZE; i++) {
                 NativeImage image = new NativeImage(NativeImage.Format.RGBA, FRAME_WIDTH, FRAME_HEIGHT, false);
@@ -127,7 +139,7 @@ public final class StartupVideo {
 
             active = true;
             running = true;
-            masterVolume = client.options.getSoundSourceOptionInstance(SoundSource.MASTER).get().floatValue();
+            masterVolume = client.options.getSoundSourceVolume(SoundSource.MASTER);
             applyVolume();
             Thread decoder = new Thread(() -> decodeLoop(exe, video), "VideoLoading-StartupVideoDecoder");
             decoder.setDaemon(true);
@@ -139,6 +151,11 @@ public final class StartupVideo {
             active = false;
             running = false;
         }
+    }
+
+    /** 纯黑首帧，避免纹理上传前出现垃圾像素 */
+    private static void fillBlank(NativeImage image) {
+        image.fillRect(0, 0, FRAME_WIDTH, FRAME_HEIGHT, 0xFF000000);
     }
 
     public static boolean isActive() {
@@ -182,12 +199,13 @@ public final class StartupVideo {
 
     /**
      * 绘制当前解码帧（黑底居中、等比适配窗口）。
-     * 返回 true 表示视频会话仍然活跃，{@code LoadingOverlay} 不应绘制原版 logo。
+     * 返回 true 表示视频会话仍然活跃，加载界面不应绘制 Forge 原进度条。
      */
-    public static boolean renderFrame(GuiGraphics context) {
+    public static boolean renderFrame(GuiGraphics graphics) {
         if (!active) {
             return false;
-        }        // 取出最新解码帧（丢弃积压的旧帧），全部归还缓冲池
+        }
+        // 取出最新解码帧（丢弃积压的旧帧），全部归还缓冲池
         Frame latest = null;
         Frame frame;
         while ((frame = READY.poll()) != null) {
@@ -197,51 +215,104 @@ public final class StartupVideo {
             latest = frame;
         }
         if (latest != null) {
-            // 拷贝到纹理自有 image 后上传；不能用 setImage，它会 close 池里的 image
+            // 拷贝到纹理自有 image 后上传；不能用 setPixels，它会 close 池里的 image
             texture.getPixels().copyFrom(latest.image());
             texture.upload();
             textureReady = true;
             FREE.offer(latest);
         }
-        int windowWidth = context.guiWidth();
-        int windowHeight = context.guiHeight();
-        context.fill(0, 0, windowWidth, windowHeight, 0xFF000000);
+        int windowWidth = graphics.guiWidth();
+        int windowHeight = graphics.guiHeight();
+        graphics.fill(0, 0, windowWidth, windowHeight, 0xFF000000);
         if (!textureReady) {
             return true;
         }
         float scale = Math.min((float) windowWidth / FRAME_WIDTH, (float) windowHeight / FRAME_HEIGHT);
         int drawWidth = Math.round(FRAME_WIDTH * scale);
         int drawHeight = Math.round(FRAME_HEIGHT * scale);
-        context.blit(VIDEO_ID, (windowWidth - drawWidth) / 2, (windowHeight - drawHeight) / 2,
+        graphics.blit(VIDEO_ID, (windowWidth - drawWidth) / 2, (windowHeight - drawHeight) / 2,
                 drawWidth, drawHeight, 0.0F, 0.0F, FRAME_WIDTH, FRAME_HEIGHT, FRAME_WIDTH, FRAME_HEIGHT);
         return true;
     }
 
+    // ── 早期翻译 ──
+    // 横幅渲染在资源包加载完成之前，I18n 尚无语言表可查（生产环境会显示原始
+    // key），这里直接从 jar 内的 lang JSON 读取，语言码回退 options.txt
+    private static final Map<String, String> EARLY_LANG = loadEarlyLang();
+
+    private static Map<String, String> loadEarlyLang() {
+        Map<String, String> out = new HashMap<>();
+        String code = null;
+        try {
+            code = Minecraft.getInstance().getLanguageManager().getSelected();
+        } catch (Throwable ignored) {
+            // 加载界面阶段语言管理器可能尚未就绪
+        }
+        if (code == null || code.isEmpty()) {
+            try {
+                Path options = FMLPaths.GAMEDIR.get().resolve("options.txt");
+                if (Files.exists(options)) {
+                    for (String line : Files.readAllLines(options)) {
+                        if (line.startsWith("lang:")) {
+                            code = line.substring(5).trim();
+                            break;
+                        }
+                    }
+                }
+            } catch (Throwable ignored) {
+            }
+        }
+        for (String candidate : new String[]{code, "en_us"}) {
+            if (candidate == null || candidate.isEmpty() || !out.isEmpty()) {
+                continue;
+            }
+            try (InputStream in = StartupVideo.class.getResourceAsStream(
+                    "/assets/videoloading/lang/" + candidate + ".json")) {
+                if (in == null) {
+                    continue;
+                }
+                JsonObject json = JsonParser.parseReader(
+                        new InputStreamReader(in, StandardCharsets.UTF_8)).getAsJsonObject();
+                json.entrySet().forEach(e -> out.put(e.getKey(), e.getValue().getAsString()));
+            } catch (Throwable ignored) {
+            }
+        }
+        out.putIfAbsent("gui.loadingMinecraft", "Loading Minecraft");
+        out.putIfAbsent(StartupVideoConfig.SKIP_KEY, "Skip");
+        return out;
+    }
+
+    /** 加载界面阶段的翻译：不走 I18n（此时语言表未装载）。 */
+    private static String earlyTr(String key) {
+        String s = EARLY_LANG.get(key);
+        return s != null ? s : key;
+    }
+
     /**
-     * 视频播放期间替代原版 {@code GenericMessageScreen} 的 HUD：
-     * 底部一条只有文字的横幅「正在加载 Minecraft」，
+     * 视频播放期间替代原版 {@code MessageScreen} 的 HUD：
+     * 屏幕底部一条半透明横幅，居中「正在加载 Minecraft」，
      * 以及（玩家点击屏幕后）右上角的跳过按钮。
      */
-    public static void renderHud(GuiGraphics context) {
+    public static void renderHud(GuiGraphics graphics) {
         Minecraft client = Minecraft.getInstance();
-        int width = context.guiWidth();
-        int height = context.guiHeight();
+        int width = graphics.guiWidth();
+        int height = graphics.guiHeight();
 
-        // 底部横幅只有文字，不画背景条（视频画面本身就是黑的）
-        context.drawCenteredString(client.font,
-                Component.translatable("gui.loadingMinecraft"), width / 2, height - 26, 0xFFFFFFFF);
+        // 底部横幅只有文字，不画背景（视频画面本身就是黑的）
+        graphics.drawCenteredString(client.font,
+                Component.literal(earlyTr("gui.loadingMinecraft")), width / 2, height - 26, 0xFFFFFFFF);
 
         if (skipShown) {
             int skipX = width - SKIP_WIDTH - SKIP_MARGIN;
-            context.fill(skipX, SKIP_MARGIN, skipX + SKIP_WIDTH, SKIP_MARGIN + SKIP_HEIGHT, 0x66000000);
-            context.renderOutline(skipX, SKIP_MARGIN, SKIP_WIDTH, SKIP_HEIGHT, 0xFFFFFFFF);
-            context.drawCenteredString(client.font,
-                    Component.translatable(StartupVideoConfig.SKIP_KEY),
+            graphics.fill(skipX, SKIP_MARGIN, skipX + SKIP_WIDTH, SKIP_MARGIN + SKIP_HEIGHT, 0x66000000);
+            graphics.renderOutline(skipX, SKIP_MARGIN, SKIP_WIDTH, SKIP_HEIGHT, 0xFFFFFFFF);
+            graphics.drawCenteredString(client.font,
+                    Component.literal(earlyTr(StartupVideoConfig.SKIP_KEY)),
                     skipX + SKIP_WIDTH / 2, SKIP_MARGIN + (SKIP_HEIGHT - 8) / 2, 0xFFFFFFFF);
         }
     }
 
-    /** 视频期间点击（由 {@code MouseMixin} 从 {@code MouseHandler#onPress} 转发）。 */
+    /** 视频期间点击（由 {@code MouseMixin} 从 {@code Mouse#onPress} 转发）。 */
     public static void onMouseClick(int x, int y) {
         if (!holdsOverlay()) {
             return;
