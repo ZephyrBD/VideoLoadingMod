@@ -1,7 +1,8 @@
 # VideoLoading
 
 把 Minecraft 的加载界面（Mojang logo 一屏）替换为一段启动视频的 Fabric mod，
-目标版本 Minecraft **1.21.1**（Fabric Loader 0.16.14+，Java 21）。
+支持 Minecraft **1.21.1** 与 **1.20.1**，加载器覆盖 **Fabric / Forge / NeoForge**
+（Java 21 / Java 17，见下方各分支）。当前分支：1.21.1 Fabric。
 
 ## 功能
 
