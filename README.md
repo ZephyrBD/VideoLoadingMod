@@ -44,6 +44,10 @@
 产物在 `build/libs/`。仓库根目录的 `video.mp4` / `audio.mp3` 为原始素材，
 已加入 `.gitignore`。
 
+## 视频来源
+
+启动视频素材来自 B 站：[BV1D7446fEt5](https://www.bilibili.com/video/BV1D7446fEt5)。
+
 ## 许可
 
 GPL-2.0，见 `LICENSE`。内置的 ffmpeg 二进制遵循其上游许可
