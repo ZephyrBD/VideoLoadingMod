@@ -7,27 +7,57 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - branch: main
+            java: 21
+            mc: 1.21.1
+            loader: fabric
+          - branch: 1.21.1-forge
+            java: 21
+            mc: 1.21.1
+            loader: forge
+          - branch: 1.21.1-neoforge
+            java: 21
+            mc: 1.21.1
+            loader: neoforge
+          - branch: 1.20.1-fabric
+            java: 17
+            mc: 1.20.1
+            loader: fabric
+          - branch: 1.20.1-forge
+            java: 17
+            mc: 1.20.1
+            loader: forge
+          - branch: 1.20.1-neoforge
+            java: 17
+            mc: 1.20.1
+            loader: neoforge
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: ${{ matrix.branch }}
 
       - uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: '21'
+          java-version: ${{ matrix.java }}
 
       - uses: actions/cache@v4
         with:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
-          key: gradle-${{ runner.os }}-${{ hashFiles('*.gradle', 'gradle.properties', 'settings.gradle') }}
-          restore-keys: gradle-${{ runner.os }}-
+          key: gradle-${{ runner.os }}-${{ matrix.branch }}-${{ hashFiles('*.gradle', 'gradle.properties', 'settings.gradle') }}
+          restore-keys: gradle-${{ runner.os }}-${{ matrix.branch }}-
 
       - name: Build
         run: sh ./gradlew build --no-daemon --console=plain
 
       - name: Rename jar
-        run: cp build/libs/videoloading-1.0.jar "videoloading-1.21.1-fabric-1.0.jar"
+        run: cp build/libs/videoloading-1.0.jar "videoloading-${{ matrix.mc }}-${{ matrix.loader }}-1.0.jar"
 
       - name: Upload to release
         env:
@@ -36,4 +66,4 @@ jobs:
         run: |
           gh release view "$TAG" >/dev/null 2>&1 || \
             gh release create "$TAG" --title "VideoLoading $TAG" --notes "VideoLoading $TAG — 按 MC 版本和加载器选择对应 jar"
-          gh release upload "$TAG" "videoloading-1.21.1-fabric-1.0.jar" --clobber
+          gh release upload "$TAG" "videoloading-${{ matrix.mc }}-${{ matrix.loader }}-1.0.jar" --clobber
