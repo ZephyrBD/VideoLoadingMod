@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[47,)"
-license="GPL-2.0"
+license="MIT"
 issueTrackerURL="https://github.com/zephyrbd/VideoLoading/issues"
 # 纯客户端 mod：专用服务器跳过加载
 clientSideOnly=true

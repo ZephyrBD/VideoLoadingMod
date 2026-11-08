@@ -2,7 +2,6 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'net.neoforged.moddev.legacyforge' version "${moddev_legacy_version}"
-    id 'com.github.hierynomus.license' version '0.16.1'
 }
 
 version = project.mod_version
@@ -101,25 +100,6 @@ jar {
     }
 }
 
-// ===== License 插件配置 =====
-license {
-    // 指定头文件
-    header rootProject.file('LICENSE-HEADER.txt')
-
-    include '**/*.java'
-
-    // Java 文件使用标准注释风格
-    mapping {
-        java = 'SLASHSTAR_STYLE'
-    }
-
-    // 排除无需检查的目录
-    exclude '**/generated/**'
-    exclude '**/META-INF/**'
-}
-
-// 每次构建前检查 license
-check.dependsOn 'licenseFormat'
 
 publishing {
     publications {
