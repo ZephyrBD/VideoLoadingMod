@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2025 MCZS(ZephyrBD and FayYu)
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program; if not, write to the Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
- */
 package top.techmczs.videoloading.client;
 
 import java.io.BufferedInputStream;
@@ -151,9 +135,9 @@ public final class StartupVideo {
             decoder.setDaemon(true);
             decoder.start();
             playAudio(audio);
-            LOGGER.info("启动视频开始播放（60s 源，加载期间自动循环）");
+            LOGGER.info("Startup video started (60s source, looping while the game loads)");
         } catch (Exception e) {
-            LOGGER.warn("启动视频初始化失败，保留原版 Mojang logo", e);
+            LOGGER.warn("Startup video init failed, keeping the vanilla Mojang logo", e);
             active = false;
             running = false;
         }
@@ -271,7 +255,7 @@ public final class StartupVideo {
             }
         } else {
             skipShown = true;
-            LOGGER.info("呼出启动视频跳过按钮（坐标 {}，{}）", x, y);
+            LOGGER.info("Skip button shown (x: {}, y: {})", x, y);
         }
     }
 
@@ -285,7 +269,7 @@ public final class StartupVideo {
     /** 跳过：解除「必须看完一遍」的限制，视频停止后由原版在加载完成时放行界面。 */
     public static void skip() {
         if (!firstPassDone) {
-            LOGGER.info("玩家跳过启动视频，加载完成后放行界面");
+            LOGGER.info("Startup video skipped by player, releasing the screen once loading finishes");
         }
         firstPassDone = true;
     }
@@ -348,19 +332,19 @@ public final class StartupVideo {
                     break;
                 }
                 if (frames == 0) {
-                    LOGGER.warn("启动视频解码失败（未产出任何帧），回退原版 logo");
+                    LOGGER.warn("Startup video decoding failed (no frames produced), falling back to the vanilla logo");
                     active = false;
                     break;
                 }
                 firstPassDone = true;
-                LOGGER.info("启动视频第一遍播完（{} 帧），加载界面放行", frames);
+                LOGGER.info("Startup video finished its first playthrough ({} frames), releasing the loading screen", frames);
                 // 视频回到开头，音频同步回卷
                 if (clip != null) {
                     clip.setMicrosecondPosition(0L);
                 }
             }
         } catch (Exception e) {
-            LOGGER.warn("启动视频解码线程异常，回退原版 logo", e);
+            LOGGER.warn("Startup video decoder thread crashed, falling back to the vanilla logo", e);
             active = false;
         }
     }
@@ -393,7 +377,7 @@ public final class StartupVideo {
                 applyVolume();
                 clip.start();
             } catch (Exception e) {
-                LOGGER.warn("启动视频音频播放失败", e);
+                LOGGER.warn("Failed to play startup video audio", e);
             }
         }, "VideoLoading-StartupAudio");
         thread.setDaemon(true);
@@ -419,7 +403,7 @@ public final class StartupVideo {
         }
         try (InputStream probe = StartupVideo.class.getResourceAsStream(RESOURCE_DIR + "/" + resource)) {
             if (probe == null) {
-                LOGGER.warn("jar 内没有 {} 的 ffmpeg 二进制，尝试使用系统 PATH 中的 ffmpeg", resource);
+                LOGGER.warn("No bundled ffmpeg binary for {}, falling back to ffmpeg from the system PATH", resource);
                 Path system = locateSystemFfmpeg();
                 if (system == null) {
                     throw new IOException("找不到可用的 ffmpeg（内置缺失且系统 PATH 无 ffmpeg）");
