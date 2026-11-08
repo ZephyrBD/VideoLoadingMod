@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[47,)"
-license="GPL-2.0"
+license="MIT"
 issueTrackerURL="https://github.com/zephyrbd/VideoLoading/issues"
 
 [[mods]]

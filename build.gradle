@@ -23,7 +23,6 @@ buildscript {
 plugins {
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id 'maven-publish'
-    id 'com.github.hierynomus.license' version '0.16.1'
 }
 
 apply plugin: 'org.spongepowered.mixin'
@@ -96,24 +95,6 @@ jar {
     finalizedBy 'reobfJar'
 }
 
-// ===== License 插件配置 =====
-license {
-    // 指定头文件
-    header rootProject.file('LICENSE-HEADER.txt')
-
-    include '**/*.java'
-
-    // Java 文件使用标准注释风格
-    mapping {
-        java = 'SLASHSTAR_STYLE'
-    }
-
-    // 排除无需检查的目录
-    exclude '**/META-INF/**'
-}
-
-// 每次构建前检查 license
-check.dependsOn 'licenseFormat'
 
 publishing {
     publications {
