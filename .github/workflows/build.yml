@@ -26,15 +26,15 @@ jobs:
             mc: 1.21.1
             loader: neoforge
           - branch: 1.20.1-fabric
-            java: 17
+            java: 21
             mc: 1.20.1
             loader: fabric
           - branch: 1.20.1-forge
-            java: 17
+            java: 21
             mc: 1.20.1
             loader: forge
           - branch: 1.20.1-neoforge
-            java: 17
+            java: 21
             mc: 1.20.1
             loader: neoforge
     steps:
@@ -50,9 +50,10 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: |
-            ~/.gradle/caches
             ~/.gradle/wrapper
-          key: gradle-${{ runner.os }}-${{ matrix.branch }}-${{ hashFiles('*.gradle', 'gradle.properties', 'settings.gradle') }}
+            ~/.gradle/caches/modules-2
+            ~/.gradle/caches/fabric-loom
+          key: gradlev2-${{ runner.os }}-${{ matrix.branch }}-${{ hashFiles('*.gradle', 'gradle.properties', 'settings.gradle') }}
           restore-keys: gradle-${{ runner.os }}-${{ matrix.branch }}-
 
       - name: Build
