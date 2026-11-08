@@ -42,7 +42,9 @@ public abstract class SplashOverlayMixin {
     @Final
     private ReloadInstance reload;
 
-    @Inject(method = "render", at = @At("HEAD"), cancellable = true, remap = false)
+    // 显式 remap=true：生产环境是 SRG 名（render→m_88315_），必须让 AP
+    // 把映射写进 refmap；类级 remap=false 会级联到这里，必须显式覆盖
+    @Inject(method = "render", at = @At("HEAD"), cancellable = true, remap = true)
     private void vl$renderStartupVideo(GuiGraphics graphics, int mouseX, int mouseY, float partialTick,
             CallbackInfo ci) {
         // 首次渲染时初始化视频；失败则回退 Forge 原版加载界面
