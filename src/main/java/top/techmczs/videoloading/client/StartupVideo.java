@@ -4,10 +4,14 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.attribute.PosixFilePermissions;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -18,8 +22,12 @@ import javax.sound.sampled.FloatControl;
 import javax.sound.sampled.LineEvent;
 
 import com.mojang.blaze3d.platform.NativeImage;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import net.minecraft.Util;
+
+import net.neoforged.fml.loading.FMLPaths;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
@@ -226,20 +234,73 @@ public final class StartupVideo {
      * 屏幕底部一条半透明横幅，居中「正在加载 Minecraft」，
      * 以及（玩家点击屏幕后）右上角的跳过按钮。
      */
+    // ── 早期翻译 ──
+    // 横幅渲染在资源包加载完成之前，I18n 尚无语言表可查（生产环境会显示原始
+    // key），这里直接从 jar 内的 lang JSON 读取，语言码回退 options.txt
+    private static final Map<String, String> EARLY_LANG = loadEarlyLang();
+
+    private static Map<String, String> loadEarlyLang() {
+        Map<String, String> out = new HashMap<>();
+        String code = null;
+        try {
+            code = Minecraft.getInstance().getLanguageManager().getSelected();
+        } catch (Throwable ignored) {
+            // 加载界面阶段语言管理器可能尚未就绪
+        }
+        if (code == null || code.isEmpty()) {
+            try {
+                Path options = FMLPaths.GAMEDIR.get().resolve("options.txt");
+                if (Files.exists(options)) {
+                    for (String line : Files.readAllLines(options)) {
+                        if (line.startsWith("lang:")) {
+                            code = line.substring(5).trim();
+                            break;
+                        }
+                    }
+                }
+            } catch (Throwable ignored) {
+            }
+        }
+        for (String candidate : new String[]{code, "en_us"}) {
+            if (candidate == null || candidate.isEmpty() || !out.isEmpty()) {
+                continue;
+            }
+            try (InputStream in = StartupVideo.class.getResourceAsStream(
+                    "/assets/videoloading/lang/" + candidate + ".json")) {
+                if (in == null) {
+                    continue;
+                }
+                JsonObject json = JsonParser.parseReader(
+                        new InputStreamReader(in, StandardCharsets.UTF_8)).getAsJsonObject();
+                json.entrySet().forEach(e -> out.put(e.getKey(), e.getValue().getAsString()));
+            } catch (Throwable ignored) {
+            }
+        }
+        out.putIfAbsent("gui.loadingMinecraft", "Loading Minecraft");
+        out.putIfAbsent(StartupVideoConfig.SKIP_KEY, "Skip");
+        return out;
+    }
+
+    /** 加载界面阶段的翻译：不走 I18n（此时语言表未装载）。 */
+    private static String earlyTr(String key) {
+        String s = EARLY_LANG.get(key);
+        return s != null ? s : key;
+    }
+
     public static void renderHud(GuiGraphics graphics) {
         Minecraft client = Minecraft.getInstance();
         int width = graphics.guiWidth();
         int height = graphics.guiHeight();
 
         graphics.drawCenteredString(client.font,
-                Component.translatable("gui.loadingMinecraft"), width / 2, height - 26, 0xFFFFFFFF);
+                Component.literal(earlyTr("gui.loadingMinecraft")), width / 2, height - 26, 0xFFFFFFFF);
 
         if (skipShown) {
             int skipX = width - SKIP_WIDTH - SKIP_MARGIN;
             graphics.fill(skipX, SKIP_MARGIN, skipX + SKIP_WIDTH, SKIP_MARGIN + SKIP_HEIGHT, 0x66000000);
             graphics.renderOutline(skipX, SKIP_MARGIN, SKIP_WIDTH, SKIP_HEIGHT, 0xFFFFFFFF);
             graphics.drawCenteredString(client.font,
-                    Component.translatable(StartupVideoConfig.SKIP_KEY),
+                    Component.literal(earlyTr(StartupVideoConfig.SKIP_KEY)),
                     skipX + SKIP_WIDTH / 2, SKIP_MARGIN + (SKIP_HEIGHT - 8) / 2, 0xFFFFFFFF);
         }
     }
