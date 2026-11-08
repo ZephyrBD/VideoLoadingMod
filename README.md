@@ -50,6 +50,6 @@
 
 ## 许可
 
-GPL-2.0，见 `LICENSE`。内置的 ffmpeg 二进制遵循其上游许可
+MIT，见 `LICENSE`。内置的 ffmpeg 二进制遵循其上游许可
 （Windows 版来自 imageio-ffmpeg，macOS/Linux 版来自
 [eugeneware/ffmpeg-static](https://github.com/eugeneware/ffmpeg-static)）。
