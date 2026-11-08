@@ -27,10 +27,6 @@ repositories {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
-
-
-    // Mixin 注解处理器：生成 refmap（Forge 生产环境是 SRG 名，必须映射）
-    annotationProcessor 'org.spongepowered:mixin:0.8.7:processor'
 }
 
 minecraft {
@@ -63,45 +59,8 @@ tasks.withType(JavaCompile).configureEach {
     it.options.release = 21
 }
 
-// Mixin 注解处理器生成 refmap 需要 srg↔official 的 tsrg 映射，
-// ForgeGradle 不自动注入，这里手动处理：其缓存里的 srg_to_official.tsrg
-// 左列是 SRG、右列是 official，而注解处理器需要以 compile 名（official）
-// 为 key 反查 SRG，因此把两列对调后写进 build 目录供 -AreobfTsrgFile 使用
-def srgToOfficialTsrg = fileTree("${System.getProperty('user.home')}/.gradle/caches/forge_gradle/minecraft_user_repo/de/oceanlabs/mcp/mcp_config") {
-    include "1.21.1-*/srg_to_official_${project.minecraft_version}.tsrg"
-}.singleFile
-
-def officialToSrgTsrgFile = layout.buildDirectory.file("mixin-mappings/official_to_srg.tsrg").get().asFile
-
-// 简单起见在配置期直接转换（24 万行，开销可忽略）
-officialToSrgTsrgFile.parentFile.mkdirs()
-officialToSrgTsrgFile.text = srgToOfficialTsrg.readLines('UTF-8').collect { line ->
-    if (line.isEmpty() || line.startsWith('\t\t')) {
-        return line                            // 参数行与空行原样保留
-    }
-    if (line.startsWith('\t')) {
-        def parts = line.substring(1).split(' ')
-        if (parts.length == 3) {
-            return "\t${parts[2]} ${parts[1]} ${parts[0]}"   // 方法行：srg desc official → official desc srg
-        } else if (parts.length == 2) {
-            return "\t${parts[1]} ${parts[0]}"               // 字段行：srg official → official srg
-        }
-        return line                            // static 标记行原样保留
-    }
-    def parts = line.split(' ')
-    return parts.length == 2 ? "${parts[1]} ${parts[0]}" : line  // 类行：srg official → official srg
-}.join('\n')
-
-def refmapOutputDir = layout.buildDirectory.dir("mixin-refmap").get().asFile
-
-compileJava {
-    options.compilerArgs += [
-            '-AdefaultObfuscationEnv=searge',
-            '-AmappingTypes=tsrg',
-            "-AreobfTsrgFile=${officialToSrgTsrgFile.absolutePath}",
-            "-AoutRefMapFile=${refmapOutputDir}/videoloading.refmap.json"
-    ]
-}
+// Forge 1.20.5+ 生产环境改用 Mojang 官方名运行时（FG6 无 reobfJar），
+// 编译名即运行名，Mixin 无需 refmap 映射
 
 // 把 classes 与 resources 合并到同一输出目录。
 // Minecraft 1.20.5+ 的 FML 移除了 MOD_CLASSES/UnionFileSystem 机制，模块必须
@@ -122,12 +81,6 @@ java {
 
 jar {
     inputs.property "archivesName", project.base.archivesName
-
-    // refmap 只随 jar 发布（SRG 名），dev 运行时输出目录里没有它，
-    // Mixin 会直接用注解里的官方名匹配 dev 的官方名运行时
-    from(refmapOutputDir) {
-        include 'videoloading.refmap.json'
-    }
 
     manifest {
         attributes([
